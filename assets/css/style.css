@@ -1,27 +1,34 @@
 body{
     width:100% ;
     height: 1080px;
-
-
+    font-family: Hiragino Kaku Gothic Std;
 }
 h1{
 
 }
 
 #nav_bar{
-    width: 100%;
-    height: 80px;
-    background-color: black;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 50px;
+    text-decoration: none;
+    color: rgb(230, 173, 19);    
+}
+
+#nav_bar_item{
+    color: rgb(0, 0, 0); 
+    text-decoration: none;
+    padding: 5px;
 }
 
 button{
    
-   border: none;
+    border: none;
     border-radius: 50px;
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
-    font-family:Hiragino Kaku Gothic Std;
+    font-family: Hiragino Kaku Gothic Std;
 }
 #bt_1{
     width: 276px;
@@ -35,3 +42,11 @@ button{
     background-color: black;
     color: white;
 }
+
+#div_1{
+    padding-top: 100px;
+    padding-left: 30px;
+    font-size: 20px;
+    align-items: left;
+}
+
