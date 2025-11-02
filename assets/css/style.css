@@ -1,7 +1,9 @@
 body{
-    width:100% ;
+    width: auto;
     height: 1080px;
-    font-family: Hiragino Kaku Gothic Std;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
 }
 h1{
 
@@ -47,6 +49,13 @@ button{
     padding-top: 100px;
     padding-left: 30px;
     font-size: 20px;
-    align-items: left;
+    box-align: left;
+    width: 48%;
 }
+
+#div_2{
+    box-align: right;
+    width: 48%;
+}
+
 
