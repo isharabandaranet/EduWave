@@ -99,7 +99,20 @@ button{
     
 }
 
+#div_2{
+    height: 125%;
+    background-color: #D2F4FF;
+    padding-left: 180px;
+    padding-right: 180px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
 
+#div_3{
+    height: 360px;
+    background-color:liner-gradient(to right,#024CEA ,#35C4FC);not working
+
+}
 
     
 
