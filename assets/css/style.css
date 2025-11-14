@@ -7,8 +7,6 @@ body{
      margin-left: auto;
     margin-right: auto;
     font-family: Montserrat;
-}
-h1{
 
 }
 
@@ -16,7 +14,6 @@ header{
     top: 50px;
     width: 100%;
     height: 100px;
-    background-color;
     position: relative;
 
 }
@@ -110,10 +107,9 @@ button{
 
 #div_3{
     height: 360px;
-    background-color:liner-gradient(to right,#024CEA ,#35C4FC);not working
+    background-color:liner-gradient(to right,#024CEA ,#35C4FC);
 
 }
 
-    
 
 
