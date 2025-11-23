@@ -51,13 +51,13 @@ header {
 
 #img_home {
     width: 880px;
-    height: auto; /* maintain aspect ratio */
+    height: auto; 
     position: absolute;
     right: 0;
     top: 50px;
 }
 
-/* GLOBAL BUTTONS */
+
 button {
     border: none;
     border-radius: 50px;
@@ -82,10 +82,10 @@ button {
     margin-left: 10px;
 }
 
-/* SECTION 2 (The Blue Area) */
+/* SECTION 2 */
 #div_2 {
     width: 100%;
-    /* Use min-height so content doesn't get cut off */
+
     min-height: 100vh; 
     background-color: #D2F4FF;
     padding-top: 80px;
@@ -95,29 +95,24 @@ button {
 #pt_1, #pt_2 {
     text-align: center;
 }
-
-/* =========================================
-   NEW CARD CSS (Flexbox Alignment)
-   ========================================= */
-
-/* 1. The Container */
+/*Container */
 .cards-container {
     display: flex;
-    flex-wrap: wrap;       /* Wraps cards to next line */
-    justify-content: center; /* Centers them horizontally */
-    gap: 30px;             /* Space between cards */
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 30px;
     max-width: 1200px;
-    margin: 50px auto 0 auto; /* Center the container itself */
+    margin: 50px auto 0 auto;
 }
 
-/* 2. The Card Box */
+/* Card Box */
 .card {
     background-color: #ffffff;
     width: 300px;
     padding: 40px 35px;
-    border-radius: 25px 120px 25px 25px; /* Asymmetric shape */
+    border-radius: 25px 120px 25px 25px; 
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    flex-shrink: 0; /* Prevents cards from getting squashed */
+    flex-shrink: 0;
 }
 
 /* 3. The Blue Badge (was H1) */
@@ -159,7 +154,7 @@ button {
     color: #004bdd;
     font-weight: 700;
     font-size: 16px;
-    border-radius: 0; /* Override global button radius */
+    border-radius: 0; 
 }
 
 .card-btn:hover {
