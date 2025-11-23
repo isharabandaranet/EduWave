@@ -2,19 +2,12 @@
 
 body {
     width: 100%;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: Montserrat;
-}
-
-h1 {
-
+    margin: 0;
+    font-family: Montserrat, sans-serif;
 }
 
 /* HEADER */
 header {
-    top: 50px;
     width: 100%;
     height: 100px;
     position: relative;
@@ -24,7 +17,6 @@ header {
     position: relative;
     top: 10px;
     left: 107px;
-    scale: 78%;
 }
 
 #nav_bar {
@@ -34,7 +26,7 @@ header {
     padding-right: 164px;
 }
 
-#nav_bar_item {
+.nav_bar_item {
     color: black;
     text-decoration: none;
     padding: 27px;
@@ -47,9 +39,25 @@ header {
     width: 100%;
     height: 600px;
     position: relative;
-    padding-right: 50px;
 }
 
+#div_1 {
+    width: 600px;
+    position: relative;
+    top: 80px;
+    padding-left: 130px;
+    font-size: 30px;
+}
+
+#img_home {
+    width: 880px;
+    height: auto; /* maintain aspect ratio */
+    position: absolute;
+    right: 0;
+    top: 50px;
+}
+
+/* GLOBAL BUTTONS */
 button {
     border: none;
     border-radius: 50px;
@@ -71,117 +79,89 @@ button {
     height: 64px;
     background-color: black;
     color: white;
+    margin-left: 10px;
 }
 
-#div_1 {
-    width: 600px;
-    position: relative;
-    top: 80px;
-    padding-left: 130px;
-    font-size: 30px;
-}
-
-#img_home {
-    width: 880px;
-    height: 570px;
-    position: relative;
-    float: right;
-    bottom: 394px;
-}
+/* SECTION 2 (The Blue Area) */
 #div_2 {
     width: 100%;
-    height: 100%;
+    /* Use min-height so content doesn't get cut off */
+    min-height: 100vh; 
     background-color: #D2F4FF;
-    position: relative;
-    top: 80px;
-}
-/* EXAMPLE FIX */
-#div_3 {
-    height: 360px;
-    background: linear-gradient(to right, #024CEA, #35C4FC);
+    padding-top: 80px;
+    padding-bottom: 100px;
 }
 
-#pt_1{
+#pt_1, #pt_2 {
     text-align: center;
 }
 
-#pt_2{
-    text-align: center;
+/* =========================================
+   NEW CARD CSS (Flexbox Alignment)
+   ========================================= */
+
+/* 1. The Container */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;       /* Wraps cards to next line */
+    justify-content: center; /* Centers them horizontally */
+    gap: 30px;             /* Space between cards */
+    max-width: 1200px;
+    margin: 50px auto 0 auto; /* Center the container itself */
 }
 
-#sec_p1 {
+/* 2. The Card Box */
+.card {
     background-color: #ffffff;
     width: 300px;
     padding: 40px 35px;
-    
-    /* The asymmetric shape: Top-Right corner is 120px */
-    border-radius: 25px 120px 25px 25px;
-    
+    border-radius: 25px 120px 25px 25px; /* Asymmetric shape */
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    flex-shrink: 0; /* Prevents cards from getting squashed */
 }
 
-/* 2. The "01" Badge (H1) */
-#p1_1 {
-    /* Reset default H1 margins */
-    margin: 0 0 25px 0;
-    
-    background-color: #004bdd; /* Royal Blue */
+/* 3. The Blue Badge (was H1) */
+.badge {
+    background-color: #004bdd;
     color: white;
     font-size: 32px;
     font-weight: 900;
-    
     width: 70px;
     height: 70px;
-    
-    /* Center the text inside the badge */
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    /* Create the geometric shape */
     clip-path: polygon(20% 0%, 80% 5%, 100% 60%, 50% 100%, 0% 60%);
-    
-    /* Rotate the badge */
     transform: rotate(-8deg);
+    margin-bottom: 25px;
 }
 
-/* 3. The Title (H2) */
-#p1_2 {
+/* 4. Card Text */
+.card-title {
     font-size: 26px;
     font-weight: 800;
     color: #000;
     margin: 0 0 15px 0;
 }
 
-/* 4. The Description (P) */
-#p1_3 {
+.card-desc {
     color: #666;
     font-size: 15px;
     line-height: 1.6;
     margin: 0 0 30px 0;
 }
 
-/* 5. The Button */
-#p1_btn {
-    /* Remove default button styles */
+/* 5. Card Link Button */
+.card-btn {
     background: none;
     border: none;
     padding: 0;
-    cursor: pointer;
-    font-family: inherit;
-    
-    /* Style it to look like the blue link */
     color: #004bdd;
     font-weight: 700;
     font-size: 16px;
+    border-radius: 0; /* Override global button radius */
 }
 
-#p1_btn:hover {
+.card-btn:hover {
     text-decoration: underline;
-}
-
-#sec_pmid{
-    display: flex; 
-    gap: 30px;  
-    justify-content: center
 }
