@@ -1,64 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-body{
-    width:100% ;
-    height:600px;
-     margin-left: auto;
+body {
+    width: 100%;
+    height: 600px;
+    margin-left: auto;
     margin-right: auto;
     font-family: Montserrat;
 }
-h1{
 
+h1 {
 
-header{
+}
+
+/* HEADER */
+header {
     top: 50px;
     width: 100%;
     height: 100px;
-    background-color;
     position: relative;
-
 }
-#img_logo{
+
+#img_logo {
     position: relative;
     top: 10px;
     left: 107px;
     scale: 78%;
-
-
-
 }
 
-#nav_bar{
+#nav_bar {
     float: right;
     position: relative;
-    clear: both;
     padding-top: 38px;
     padding-right: 164px;
-    text-decoration: none;
-    color: rgb(230, 173, 19);    
 }
 
-#nav_bar_item{
-    color: rgb(0, 0, 0); 
+#nav_bar_item {
+    color: black;
     text-decoration: none;
     padding: 27px;
     font-size: 20px;
-    width: 80px;
     font-weight: bold;
 }
 
-#home_set{
+/* HOME SECTION */
+#home_set {
     width: 100%;
     height: 600px;
     position: relative;
     padding-right: 50px;
-   
-
 }
 
-button{
-   
+button {
     border: none;
     border-radius: 50px;
     font-size: 24px;
@@ -66,53 +58,39 @@ button{
     cursor: pointer;
     font-family: Montserrat;
 }
-#bt_1{
+
+#bt_1 {
     width: 216px;
     height: 64px;
-    background: linear-gradient(to right,#024CEA ,#35C4FC);
+    background: linear-gradient(to right, #024CEA, #35C4FC);
     color: white;
 }
-#bt_2{
+
+#bt_2 {
     width: 173px;
     height: 64px;
     background-color: black;
     color: white;
 }
 
-#div_1{
+#div_1 {
     width: 600px;
     position: relative;
     top: 80px;
     padding-left: 130px;
     font-size: 30px;
 }
-    
 
-#img_home{
+#img_home {
     width: 880px;
     height: 570px;
     position: relative;
     float: right;
-    clear: both;
-    bottom:394px;
-    
+    bottom: 394px;
 }
 
-#div_2{
-    height: 125%;
-    background-color: #D2F4FF;
-    padding-left: 180px;
-    padding-right: 180px;
-    padding-top: 40px;
-    padding-bottom: 50px;
-}
-
-#div_3{
+/* EXAMPLE FIX */
+#div_3 {
     height: 360px;
-    background-color:liner-gradient(to right,#024CEA ,#35C4FC);
-
+    background: linear-gradient(to right, #024CEA, #35C4FC);
 }
-
-    
-
-
