@@ -94,3 +94,7 @@ button {
     height: 360px;
     background: linear-gradient(to right, #024CEA, #35C4FC);
 }
+
+#pt_1{
+    text-align: center;
+}
