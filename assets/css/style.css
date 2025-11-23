@@ -174,6 +174,8 @@ button {
     text-decoration: underline;
 }
 
-#sec_a5{
-    align-items: center;
+#sec_pmid{
+    display: flex; 
+    gap: 30px;  
+    justify-content: center
 }
