@@ -1,193 +1,196 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
 body {
-    width: 100%;
-    margin: 0;
-    font-family: Montserrat, sans-serif;
+	width: 100%;
+	margin: 0;
+	font-family: Montserrat, sans-serif;
 }
 
 /* HEADER */
 header {
-    width: 100%;
-    height: 100px;
-    position: relative;
+	width: 100%;
+	height: 100px;
+	position: relative;
 }
 
 #img_logo {
-    position: relative;
-    top: 10px;
-    left: 107px;
+	position: relative;
+	top: 10px;
+	left: 107px;
 }
 
 #nav_bar {
-    float: right;
-    position: relative;
-    padding-top: 38px;
-    padding-right: 164px;
+	float: right;
+	position: relative;
+	padding-top: 38px;
+	padding-right: 164px;
 }
 
 .nav_bar_item {
-    color: black;
-    text-decoration: none;
-    padding: 27px;
-    font-size: 20px;
-    font-weight: bold;
+	color: black;
+	text-decoration: none;
+	padding: 27px;
+	font-size: 20px;
+	font-weight: bold;
 }
 
 /* HOME SECTION */
 #home_set {
-    width: 100%;
-    height: 600px;
-    position: relative;
+	width: 100%;
+	height: 600px;
+	position: relative;
 }
 
 #div_1 {
-    width: 600px;
-    position: relative;
-    top: 80px;
-    padding-left: 130px;
-    font-size: 30px;
+	width: 600px;
+	position: relative;
+	top: 80px;
+	padding-left: 130px;
+	font-size: 30px;
 }
 
 #img_home {
-    width: 880px;
-    height: auto; 
-    position: absolute;
-    right: 0;
-    top: 50px;
+	width: 880px;
+	height: auto;
+	position: absolute;
+	right: 0;
+	top: 50px;
 }
 
-
 button {
-    border: none;
-    border-radius: 50px;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    font-family: Montserrat;
+	border: none;
+	border-radius: 50px;
+	font-size: 24px;
+	font-weight: bold;
+	cursor: pointer;
+	font-family: Montserrat;
 }
 
 #bt_1 {
-    width: 216px;
-    height: 64px;
-    background: linear-gradient(to right, #024CEA, #35C4FC);
-    color: white;
+	width: 216px;
+	height: 64px;
+	background: linear-gradient(to right, #024CEA, #35C4FC);
+	color: white;
 }
 
 #bt_2 {
-    width: 173px;
-    height: 64px;
-    background-color: black;
-    color: white;
-    margin-left: 10px;
+	width: 173px;
+	height: 64px;
+	background-color: black;
+	color: white;
+	margin-left: 10px;
 }
 
 /* SECTION 2 */
 #div_2 {
-    width: 100%;
-
-    min-height: 100vh; 
-    background-color: #D2F4FF;
-    padding-top: 80px;
-    padding-bottom: 100px;
+	width: 100%;
+	min-height: 100vh;
+	background-color: #D2F4FF;
+	padding-top: 80px;
+	padding-bottom: 100px;
 }
 
-#pt_1, #pt_2 {
-    text-align: center;
+#pt_1,
+#pt_2 {
+	text-align: center;
 }
-/*Container */
+
 .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; 
-    gap: 30px;
-    max-width: 1200px;
-    margin: 50px auto 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 30px;
+	max-width: 1200px;
+	margin: 50px auto 0 auto;
 }
 
-/* Card Box */
 .card {
-    background-color: #ffffff;
-    width: 300px;
-    padding: 40px 35px;
-    border-radius: 25px 120px 25px 25px; 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    flex-shrink: 0;
+	background-color: #ffffff;
+	width: 300px;
+	padding: 40px 35px;
+	border-radius: 25px 120px 25px 25px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+	flex-shrink: 0;
 }
 
-/* 3. The Blue Badge (was H1) */
 .badge {
-    background-color: #004bdd;
-    color: white;
-    font-size: 32px;
-    font-weight: 900;
-    width: 70px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    clip-path: polygon(20% 0%, 80% 5%, 100% 60%, 50% 100%, 0% 60%);
-    transform: rotate(-8deg);
-    margin-bottom: 25px;
+	background-color: #004bdd;
+	color: white;
+	font-size: 32px;
+	font-weight: 900;
+	width: 70px;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	clip-path: polygon(20% 0%, 80% 5%, 100% 60%, 50% 100%, 0% 60%);
+	transform: rotate(-8deg);
+	margin-bottom: 25px;
 }
 
-/* 4. Card Text */
 .card-title {
-    font-size: 26px;
-    font-weight: 800;
-    color: #000;
-    margin: 0 0 15px 0;
+	font-size: 26px;
+	font-weight: 800;
+	color: #000;
+	margin: 0 0 15px 0;
 }
 
 .card-desc {
-    color: #666;
-    font-size: 15px;
-    line-height: 1.6;
-    margin: 0 0 30px 0;
+	color: #666;
+	font-size: 15px;
+	line-height: 1.6;
+	margin: 0 0 30px 0;
 }
 
-/* 5. Card Link Button */
 .card-btn {
-    background: none;
-    border: none;
-    padding: 0;
-    color: #004bdd;
-    font-weight: 700;
-    font-size: 16px;
-    border-radius: 0; 
+	background: none;
+	border: none;
+	padding: 0;
+	color: #004bdd;
+	font-weight: 700;
+	font-size: 16px;
 }
 
 .card-btn:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
+/* COUNTER SECTION */
 #div_3 {
-    width: 100%;
-    display: flex;
-    height: 360px; 
-    background: linear-gradient(to bottom, #D2F4FF , #ffffff);
-    padding-top: 5%;
-    padding-bottom: 5%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; 
-    align-items: center;
-    gap: 30px;
+	width: 100%;
+	display: flex;
+	height: 360px;
+	background: linear-gradient(to bottom, #D2F4FF, #ffffff);
+	padding-top: 5%;
+	padding-bottom: 5%;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 10%;
 }
 
 .counter_box {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	border-radius: 10px;
+	text-align: center;
+	max-width: 200px;
 }
-.counter {
-    font-size: 48px;
-    font-weight: bold;
-    color: #024CEA;
-    text-align: center;
-    align-items: center;
 
+.counter {
+	font-size: 48px;
+	font-weight: bold;
+	color: #024CEA;
+	margin-bottom: 10px;
+}
+
+.counter_box h2 {
+	font-size: 18px;
+	font-weight: 600;
+	color: #333;
+	margin: 0;
+	line-height: 1.4;
 }
