@@ -186,6 +186,20 @@ button {
 	color: #024CEA;
 	margin-bottom: 10px;
 }
+.counter1 {
+	font-size: 48px;
+	font-weight: bold;
+	color: #024CEA;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+.counter_line {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
+}
 
 .counter_box h2 {
 	font-size: 18px;
