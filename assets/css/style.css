@@ -4,9 +4,12 @@ body {
 	width: 100%;
 	margin: 0;
 	font-family: Montserrat, sans-serif;
-	cursor: url('assets/img/cursor.png'), auto;
+	cursor: url('../img/cursor.png') 0 0, auto;
+	
 }
-
+a, button, .card-btn, .nav_bar_item {
+    cursor: url('../img/cursor.png') 0 0, pointer !important;
+}
 /* HEADER */
 header {
 	width: 100%;
