@@ -62,27 +62,45 @@ header {
 }
 
 button {
-	border: none;
-	border-radius: 50px;
-	font-size: 24px;
-	font-weight: bold;
-	cursor: pointer;
-	font-family: Montserrat;
+    border: none;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-family: Montserrat;
 }
 
-#bt_1 {
-	width: 216px;
-	height: 64px;
-	background: linear-gradient(to right, #024CEA, #35C4FC);
-	color: white;
+/* PRIMARY BUTTON: The Vibrant Bubble */
+#bt_1 { 
+    width: 216px; height: 64px;
+    background: linear-gradient(to right, #024CEA, #35C4FC);
+    color: white; }
+
+#bt_1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(2, 76, 234, 0.4);
+    filter: brightness(1.1);
 }
 
+/* SECONDARY BUTTON: The Glass Ghost Button */
 #bt_2 {
-	width: 173px;
-	height: 64px;
-	background-color: black;
-	color: white;
-	margin-left: 10px;
+    width: 173px;
+    height: 64px;
+    background-color: black;
+    color: white;
+    margin-left: 10px;
+}
+#bt_2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    filter: brightness(1.1);
+}
+
+
+/* Button Active State (Click effect) */
+button:active {
+    transform: scale(0.95);
 }
 
 /* SECTION 2 - Updated Background */
