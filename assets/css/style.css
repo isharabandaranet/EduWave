@@ -24,20 +24,28 @@ header {
 }
 
 #nav_bar {
-	float: right;
-	position: relative;
-	padding-top: 38px;
-	padding-right: 164px;
+    float: right;
+    display: flex; /* Better alignment */
+    padding-top: 38px;
+    padding-right: 164px;
 }
 
 .nav_bar_item {
-	color: black;
-	text-decoration: none;
-	padding: 27px;
-	font-size: 20px;
-	font-weight: bold;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
+/* Hover & Active State */
+.nav_bar_item:hover, 
+.nav_bar_item.active {
+    color: #35C4FC;
+    text-shadow: 0 0 10px rgba(53, 196, 252, 0.5); /* Glow effect */
+    transform: translateY(-2px);
+}
 /* HOME SECTION */
 #home_set {
 	width: 100%;
