@@ -285,3 +285,201 @@ button:active {
 	margin: 0;
 	line-height: 1.4;
 }
+
+/* ======================================================= */
+/* NEW PRICING SECTION STYLES (Added)                      */
+/* ======================================================= */
+
+/* Import Poppins for the new section only */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+#pricing_set {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Soft gradient background blending your styles */
+    background: linear-gradient(135deg, #ffffff 0%, #e6f7ff 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background Orbs */
+#pricing_set .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+    animation: float 10s infinite ease-in-out;
+}
+#pricing_set .orb-1 { width: 500px; height: 500px; background: rgba(47, 174, 255, 0.15); top: -100px; left: -100px; }
+#pricing_set .orb-2 { width: 600px; height: 600px; background: rgba(15, 82, 214, 0.1); bottom: -150px; right: -100px; animation-delay: 2s; }
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(30px, 50px); }
+}
+
+/* Container */
+.pricing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    z-index: 10;
+    flex-wrap: wrap;
+}
+
+/* Card Styles */
+.pricing-card {
+    background-color: #dcf7ff; 
+    border-radius: 50px;
+    padding: 50px 35px;
+    width: 360px;
+    text-align: center;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: scale(0.9);
+    border: 2px solid transparent;
+    box-shadow: 0 10px 30px rgba(166, 219, 255, 0.3);
+    margin: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Pricing Card Glass Hover Effect */
+.pricing-card:hover {
+    transform: scale(0.95) translateY(-10px);
+    background: rgba(220, 247, 255, 0.65);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05), inset 0 0 20px rgba(255, 255, 255, 0.5);
+    z-index: 10;
+}
+
+/* Featured Pricing Card */
+.pricing-card.featured {
+    background-color: #dcf7ff;
+    transform: scale(1.15);
+    z-index: 5;
+    box-shadow: 0 30px 60px rgba(79, 172, 254, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.2);
+    background: rgba(220, 247, 255, 0.75);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 1);
+}
+
+/* Pricing Avatar */
+.pricing-card .avatar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.pricing-card .circle {
+    width: 140px;
+    height: 140px;
+    background-color: #666666;
+    border-radius: 50%;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.2); 
+    z-index: 1;
+}
+
+/* --- THE SMALL DIAGONAL LEAF BADGE --- */
+.pricing-badge {
+    /* Sizing */
+    font-size: 1.6rem; 
+    padding: 8px 40px;
+    
+    /* THE SHAPE: Diagonal Leaf */
+    border-radius: 15px 45px 15px 45px;
+    
+    /* Positioning */
+    margin-top: -28px; 
+    
+    /* Style */
+    background: linear-gradient(135deg, #2dc4fd 0%, #0056e0 100%);
+    color: #ffffff;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    z-index: 2;
+    box-shadow: 0 10px 25px rgba(0, 86, 224, 0.35);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Pricing Typography */
+.pricing-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pricing-desc {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    padding: 0 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pricing-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+/* Pricing Button */
+.pricing-btn {
+    /* Resetting generic button styles from your existing code */
+    background-color: #0f52d6;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(15, 82, 214, 0.3);
+    cursor: url('../img/cursor.png') 0 0, pointer !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pricing-btn:hover {
+    background-color: #0a3bb0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 82, 214, 0.5);
+}
+
+.pricing-link {
+    text-decoration: none;
+    color: #0f52d6;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: transform 0.3s;
+    display: inline-block;
+    cursor: url('../img/cursor.png') 0 0, pointer !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pricing-link:hover {
+    transform: translateX(5px);
+}
+
+/* Mobile Adjustments for New Section */
+@media (max-width: 1000px) {
+    #pricing_set { height: auto; padding: 50px 0; }
+    .pricing-container { flex-direction: column; gap: 40px; }
+    .pricing-card, .pricing-card.featured { transform: scale(1); width: 90%; max-width: 350px; }
+    .pricing-card:hover { transform: translateY(-10px); }
+}
