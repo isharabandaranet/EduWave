@@ -197,46 +197,39 @@ button:active {
     line-height: 1.6;
     margin: 0 0 30px 0;
 }
-
+/* Update your card button to prevent flickering */
 .card-btn {
-    /* Shape & Size */
     display: inline-block;
     padding: 12px 28px;
-    border-radius: 50px; /* Fully rounded bubble shape */
+    border-radius: 50px;
     border: none;
-    
-    /* Colors - Using a vibrant gradient to match your brand */
-    background: linear-gradient(135deg, #024CEA 0%, #35C4FC 100%);
+    background: #024CEA; /* Solid color is more stable than gradient */
     color: white;
-    
-    /* Typography */
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    cursor: pointer;
-    
-    /* The "Bubble" Depth Effects */
-    box-shadow: 0 4px 15px rgba(2, 76, 234, 0.3), 
-                inset 0 -3px 0 rgba(0, 0, 0, 0.1); /* Inner shadow for 3D look */
-    
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: url('../img/cursor.png') 0 0, pointer !important;
+    transition: background 0.2s ease; /* Transition only the color */
+    box-shadow: none;
     outline: none;
 }
 
 .card-btn:hover {
-    /* Makes the bubble "pop" out slightly */
-    transform: scale(1.08);
-    box-shadow: 0 8px 25px rgba(2, 76, 234, 0.4), 
-                inset 0 -3px 0 rgba(0, 0, 0, 0.1);
-    background: linear-gradient(135deg, #35C4FC 0%, #024CEA 100%); /* Reverse gradient on hover */
+    background: #35C4FC; /* Smooth swap to light blue */
+    transform: none; /* No scaling prevents "jitter" */
 }
 
-.card-btn:active {
-    /* Mimics the bubble being pressed down */
-    transform: scale(0.95);
-    box-shadow: 0 2px 10px rgba(2, 76, 234, 0.2);
+/* Fix for Hero Buttons flickering */
+#bt_1, #bt_2 {
+    transition: background 0.2s ease, color 0.2s ease;
+    filter: none !important; /* Remove brightness filters which cause white flashes */
+}
+
+#bt_1:hover {
+    background: #0036a8; /* Darker blue solid */
+    transform: none;
 }
 
 /* COUNTER SECTION */
