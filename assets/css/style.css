@@ -288,10 +288,8 @@ button:active {
 	margin: 0;
 	line-height: 1.4;
 }
-
-/* ======================================================= */
 /* NEW PRICING SECTION STYLES (Added)                      */
-/* ======================================================= */
+
 
 
 #pricing_set {
@@ -472,3 +470,43 @@ button:active {
     line-height: 1.4;
     padding: 0 10px;
 }
+
+#div_4 {
+    width: 100%;
+    background: white;
+    padding: 60px 20px;
+    color: #001d3d;
+    text-align: center;
+}
+
+/* Cards container */
+.coach_cards_container {
+    display: flex;
+    justify-content: center;     /* center cards */
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;              /* center container */
+    flex-wrap: wrap;             /* VERY IMPORTANT */
+}
+
+/* Individual card */
+.Coach_card {
+    width: 340px;          /* was 300px */
+    text-align: center;
+}
+
+/* Image */
+.Coach_card img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Card text */
+.card-desc {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
