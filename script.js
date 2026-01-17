@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const counters = document.querySelectorAll(".counter");
     const counterSection = document.getElementById("div_3");
