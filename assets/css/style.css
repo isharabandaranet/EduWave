@@ -120,9 +120,8 @@ button:active {
     width: 100%;
     min-height: 100vh;
     /* Glass looks best over a gradient or image */
-    background: linear-gradient(135deg, #D2F4FF 0%, #BEE9FF 100%);
+    background: #D2F4FF;
     padding-top: 80px;
-    padding-bottom: 100px;
 }
 
 #pt_1, #pt_2 {
@@ -242,8 +241,6 @@ button:active {
 	display: flex;
 	height: 360px;
 	background: linear-gradient(to bottom, #D2F4FF, #ffffff);
-	padding-top: 5%;
-	padding-bottom: 5%;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
@@ -289,6 +286,10 @@ button:active {
 	margin: 0;
 	line-height: 1.4;
 }
+
+
+
+
 /* NEW PRICING SECTION STYLES (Added)                      */
 
 
@@ -301,32 +302,10 @@ button:active {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background: #f9fcff;
+    background: #ffffff;
 }
 
-/* Background Orbs */
-#pricing_set .orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    z-index: 0;
-    animation: float 10s infinite ease-in-out;
-}
-#pricing_set .orb-1 { 
-    width: 400px; 
-    height: 400px; 
-    background: rgba(53, 196, 252, 0.12); 
-    top: -100px; 
-    left: -100px; 
-}
-#pricing_set .orb-2 { 
-    width: 500px; 
-    height: 500px; 
-    background: rgba(2, 76, 234, 0.10); 
-    bottom: -150px; 
-    right: -100px; 
-    animation-delay: 2s; 
-}
+
 
 @keyframes float {
     0%, 100% { transform: translate(0, 0); }
@@ -475,9 +454,10 @@ button:active {
 #div_4 {
     width: 100%;
     background: white;
-    padding: 60px 20px;
+    padding: 20px 20px;
     color: #001d3d;
     text-align: center;
+
 }
 
 /* Cards container */
@@ -489,7 +469,8 @@ button:active {
     max-width: 1200px;
     margin: 0 auto;              /* center container */
     flex-wrap: wrap;             /* VERY IMPORTANT */
-    margin-top: 50px;
+    margin-top: 80px;
+    padding-bottom: 50px;
 }
 
 /* Individual card */
@@ -569,7 +550,6 @@ button:active {
     background: #ffffff;
     text-align: center;
     padding: 40px 0;
-    font-family: Arial, sans-serif;
     overflow: hidden;
  
 }
@@ -584,7 +564,7 @@ button:active {
     align-items: center;
     margin: 30px 0 0 0;
     gap: 50px;
-
+    margin-top: 100px;
     width: max-content;
     animation: scroll 20s linear infinite;
     padding-left: 50px;
@@ -679,14 +659,14 @@ button:active {
 
 
 /* --- Layout Helpers --- */
-.content-placeholder { height: 200px; background: white; }
+.content-placeholder { height: 200px; background: white; width: 100%; }
 
 /* --- Main Footer Wrapper --- */
 .footer-section {
     background-color: #dcf6ff;
     position: relative;
     margin-top: 120px; /* Space for the floating card */
-    padding-top: 100px; /* Internal space for content */
+    padding-top: 70px; /* Internal space for content */
 }
 
 /* --- Floating CTA Card --- */
