@@ -1,27 +1,49 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll(".counter");
+    const counterSection = document.getElementById("div_3");
 
-  const counters = document.querySelectorAll(".counter");
+    // 1. Debugging: Check if the section actually exists
+    if (!counterSection) {
+        console.error("Counter Error: Could not find the element with ID 'div_3'. Check your HTML.");
+        return;
+    }
 
-  counters.forEach(counter => {
-    counter.innerText = "0";
+    const startCounter = (counter) => {
+        const target = parseInt(counter.getAttribute("data-target"));
+        let count = 0;
+        const speed = 2000; // Total duration of animation in ms
+        const increment = target / (speed / 16); // 16ms is roughly 60fps
 
-    const updateCounter = () => {
-      const target = Number(counter.getAttribute("data-target"));
-      const current = Number(counter.innerText);
-
-      const increment = Math.ceil(target / 100);
-
-      if (current < target) {
-        counter.innerText = current + increment;
-        setTimeout(updateCounter, 20);
-      } else {
-        counter.innerText = target;
-      }
+        const updateCount = () => {
+            if (count < target) {
+                count += increment;
+                counter.innerText = Math.ceil(count);
+                requestAnimationFrame(updateCount); // Smoother than setTimeout
+            } else {
+                counter.innerText = target;
+            }
+        };
+        updateCount();
     };
 
-    updateCounter();
-  });
+    // 2. Setup the Observer with a lower threshold
+    const observerOptions = {
+        root: null, 
+        threshold: 0.1 // Triggers when just 10% of the section is visible
+    };
 
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            console.log("Section is visible:", entry.isIntersecting); // Check console for this!
+            
+            if (entry.isIntersecting) {
+                counters.forEach(counter => startCounter(counter));
+                observer.unobserve(entry.target); // Run once
+            }
+        });
+    }, observerOptions);
+
+    observer.observe(counterSection);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
