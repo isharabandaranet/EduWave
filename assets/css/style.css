@@ -48,11 +48,15 @@ header {
 }
 
 /* Hover & Active State */
-.nav_bar_item:hover, 
-.nav_bar_item.active {
+.nav_bar_item:hover{
     color: #35C4FC;
     text-shadow: 0 0 10px rgba(53, 196, 252, 0.5); /* Glow effect */
     transform: translateY(-2px);
+} 
+.nav_bar_item.active {
+    color: #35C4FC;
+    text-shadow: 0 0 10px rgba(53, 196, 252, 0.5); /* Glow effect */
+   
 }
 /* HOME SECTION */
 /* HOME SECTION - Updated with Flexbox */
@@ -147,6 +151,171 @@ button {
 button:active {
     transform: scale(0.95);
 }
+
+/* NEW PRICING SECTION STYLES (Added)                      */
+
+
+
+#pricing_set {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #ffffff;
+    
+}
+
+
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(30px, 50px); }
+}
+
+.pricing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    gap: 0;
+    margin-top: 120px; /* Space for fixed header */
+    margin-bottom: 150px; /* Space for footer */ 
+}
+
+/* --- SMALLER CARD DIMENSIONS (Maintaining 620:835 Ratio) --- */
+/* Base card */
+.pricing-card {
+    background-color: #dff5ff; 
+    border-radius: 50px;
+    padding: 50px 35px;
+    width: 360px; 
+    height: 420px; 
+    text-align: center;
+    position: relative;
+    margin: 0 -10px; 
+    transform: scale(0.9);                 /* base size */
+    border: 2px solid transparent;
+    box-shadow: 0 12px 28px rgba(2, 76, 234, 0.18);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+/* Glow + background for ALL cards on hover (no transform here) */
+.pricing-card:hover {
+    background: #e8f8ff;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 4px solid rgba(255, 255, 255, 0.6);
+    box-shadow:
+        0 25px 60px rgba(2, 76, 234, 0.35),
+        0 0 36px rgba(2, 132, 252, 0.45);   /* blue glow */
+    z-index: 20;
+}
+.pricing-card:not(.featured):hover {
+    transform: scale(0.95) translateY(-8px);
+}
+/* Featured (middle) card default state */
+.pricing-card.featured {
+    transform: scale(1.05);                 /* already popped up */
+    z-index: 10;
+    background: linear-gradient(180deg, #ecf9ff 0%, #d5f1ff 100%);
+    box-shadow:
+        0 25px 60px rgba(2, 76, 234, 0.35),
+        0 0 36px rgba(2, 132, 252, 0.45);
+}
+
+/* Featured card on hover: even bigger, keep glow */
+.pricing-card.featured:hover {
+    transform: scale(1.1) translateY(-8px);
+    box-shadow:
+        0 30px 72px rgba(2, 76, 234, 0.40),
+        0 0 42px rgba(2, 132, 252, 0.60);
+}
+
+/* --- SMALLER BUTTONS & MINIMIZED SPACE --- */
+.pricing-actions {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 40px; 
+    margin-top: auto; 
+}
+
+.pricing-btn {
+    background: #024CEA;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(2, 76, 234, 0.3);
+}
+
+.pricing-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(2, 76, 234, 0.4);
+}
+
+.pricing-link {
+    text-decoration: none;
+    color: #0f52d6;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+.pricing-link:hover {
+    transform: translateX(5px);
+}
+
+/* Avatar & Badge (Scaled down) */
+.pricing-card .avatar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing-card .circle {
+    width: 160px;
+    height: 160px;
+    background-color: #666666;
+    border-radius: 50%;
+}
+
+.pricing-badge {
+    font-size: 1.8rem;
+    padding: 10px 30px;
+    border-radius: 15px 45px 15px 45px; 
+    margin-top: -30px; 
+    background: linear-gradient(135deg, #35C4FC 0%, #024CEA 100%);
+    color: #ffffff;
+    font-weight: 800;
+    z-index: 2;
+    box-shadow: 0 10px 25px rgba(0, 86, 224, 0.35);
+}
+
+.pricing-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.pricing-desc {
+    font-size: 1rem;
+    color: #555555;
+    line-height: 1.4;
+    padding: 0 10px;
+}
+
 
 /* SECTION 2 - Updated Background */
 #div_2 {
@@ -320,169 +489,6 @@ button:active {
 	line-height: 1.4;
 }
 
-
-
-
-/* NEW PRICING SECTION STYLES (Added)                      */
-
-
-
-#pricing_set {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background: #ffffff;
-}
-
-
-
-@keyframes float {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(30px, 50px); }
-}
-
-.pricing-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    gap: 0; 
-}
-
-/* --- SMALLER CARD DIMENSIONS (Maintaining 620:835 Ratio) --- */
-/* Base card */
-.pricing-card {
-    background-color: #dff5ff; 
-    border-radius: 50px;
-    padding: 50px 35px;
-    width: 360px; 
-    height: 420px; 
-    text-align: center;
-    position: relative;
-    margin: 0 -10px; 
-    transform: scale(0.9);                 /* base size */
-    border: 2px solid transparent;
-    box-shadow: 0 12px 28px rgba(2, 76, 234, 0.18);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-/* Glow + background for ALL cards on hover (no transform here) */
-.pricing-card:hover {
-    background: #e8f8ff;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 4px solid rgba(255, 255, 255, 0.6);
-    box-shadow:
-        0 25px 60px rgba(2, 76, 234, 0.35),
-        0 0 36px rgba(2, 132, 252, 0.45);   /* blue glow */
-    z-index: 20;
-}
-.pricing-card:not(.featured):hover {
-    transform: scale(0.95) translateY(-8px);
-}
-/* Featured (middle) card default state */
-.pricing-card.featured {
-    transform: scale(1.05);                 /* already popped up */
-    z-index: 10;
-    background: linear-gradient(180deg, #ecf9ff 0%, #d5f1ff 100%);
-    box-shadow:
-        0 25px 60px rgba(2, 76, 234, 0.35),
-        0 0 36px rgba(2, 132, 252, 0.45);
-}
-
-/* Featured card on hover: even bigger, keep glow */
-.pricing-card.featured:hover {
-    transform: scale(1.1) translateY(-8px);
-    box-shadow:
-        0 30px 72px rgba(2, 76, 234, 0.40),
-        0 0 42px rgba(2, 132, 252, 0.60);
-}
-
-/* --- SMALLER BUTTONS & MINIMIZED SPACE --- */
-.pricing-actions {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    gap: 40px; 
-    margin-top: auto; 
-}
-
-.pricing-btn {
-    background: #024CEA;
-    color: white;
-    padding: 12px 30px;
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 10px 25px rgba(2, 76, 234, 0.3);
-}
-
-.pricing-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 32px rgba(2, 76, 234, 0.4);
-}
-
-.pricing-link {
-    text-decoration: none;
-    color: #0f52d6;
-    font-weight: 700;
-    font-size: 1rem;
-    transition: transform 0.3s;
-    display: inline-block;
-}
-
-.pricing-link:hover {
-    transform: translateX(5px);
-}
-
-/* Avatar & Badge (Scaled down) */
-.pricing-card .avatar-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.pricing-card .circle {
-    width: 160px;
-    height: 160px;
-    background-color: #666666;
-    border-radius: 50%;
-}
-
-.pricing-badge {
-    font-size: 1.8rem;
-    padding: 10px 30px;
-    border-radius: 15px 45px 15px 45px; 
-    margin-top: -30px; 
-    background: linear-gradient(135deg, #35C4FC 0%, #024CEA 100%);
-    color: #ffffff;
-    font-weight: 800;
-    z-index: 2;
-    box-shadow: 0 10px 25px rgba(0, 86, 224, 0.35);
-}
-
-.pricing-title {
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #000;
-}
-
-.pricing-desc {
-    font-size: 1rem;
-    color: #555555;
-    line-height: 1.4;
-    padding: 0 10px;
-}
 
 #div_4 {
     width: 100%;
