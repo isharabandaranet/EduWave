@@ -15,11 +15,14 @@ a, button, .card-btn, .nav_bar_item {
 }
 /* HEADER */
 header {
-	width: 100%;
-	height: 100px;
-	position: relative;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;           /* Sticks it to the very top edge */
+    left: 0;          /* Aligns it to the left edge */
+    z-index: 1000;    /* Ensures it sits "on top" of other layers */
+    background-color: white; /* Optional: adds a solid background so content doesn't bleed through */
 }
-
 #img_logo {
 	position: relative;
 	top: 10px;
