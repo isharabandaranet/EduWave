@@ -23,3 +23,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const indicators = document.querySelectorAll(".indicator");
+    if (!indicators.length) return;
+
+    let currentIndex = 0;
+
+    const animationDuration = 20000; // MUST match CSS
+    const intervalTime = animationDuration / indicators.length;
+
+    // ✅ Activate first indicator immediately
+    indicators[0].classList.add("active");
+
+    setInterval(() => {
+        indicators.forEach(ind => ind.classList.remove("active"));
+        indicators[currentIndex].classList.add("active");
+        currentIndex = (currentIndex + 1) % indicators.length;
+    }, intervalTime);
+
+});
+

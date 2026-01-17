@@ -569,7 +569,8 @@ button:active {
     text-align: center;
     padding: 40px 0;
     font-family: Arial, sans-serif;
-    overflow: hidden; /* Clips the scrolling content */
+    overflow: hidden;
+ 
 }
 
 #pt_1, #pt_2 {
@@ -581,18 +582,15 @@ button:active {
     display: flex;
     align-items: center;
     margin: 30px 0 0 0;
-    gap: 50px; /* Space between cards */
-    
-    /* Animation Logic */
-    width: max-content; /* Forces all cards onto one long line */
-    animation: scroll 20s linear infinite; 
-    padding-left: 50px; /* Offsets the start visually if needed */
+    gap: 50px;
+
+    width: max-content;
+    animation: scroll 20s linear infinite;
+    padding-left: 50px;
+    overflow: hidden;
 }
 
-/* Stops animation when hovering (Optional, good for UX) */
-#review_cards_container:hover {
-    animation-play-state: paused;
-}
+
 
 /* The Infinite Scroll Keyframes */
 @keyframes scroll {
@@ -612,9 +610,9 @@ button:active {
     border-radius: 35px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     max-width: 240px;
-    height: 260px;
+    min-height: 260px;
     text-align: left;
-    flex: 0 0 260px; /* Ensures cards don't shrink */
+    flex: 0 0 240px; /* Ensures cards don't shrink */
 }
 
 .card-desc {
@@ -652,4 +650,26 @@ button:active {
     font-size: 0.8rem;
     color: #777;
     margin: 3px 0 0;
+}
+
+/* ===== Slider Indicators ===== */
+
+.slider-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.indicator {
+    width: 35px;
+    height: 6px;
+    background: #cfd8ff;
+    border-radius: 10px;
+}
+
+.indicator.active {
+    width: 45px;
+    background: #1f4cff;
 }
