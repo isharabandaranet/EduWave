@@ -236,7 +236,7 @@ button:active {
     border-radius: 50px;
     padding: 50px 35px;
     width: 360px;
-    height: 420px;
+    height: 45%;
     text-align: center;
     position: relative;
     margin: 0 -10px;
@@ -675,6 +675,7 @@ button:active {
     animation: scroll 20s linear infinite;
     padding-left: 50px;
     overflow: hidden;
+    padding-bottom: 20px;
 }
 
 
@@ -768,7 +769,7 @@ button:active {
 
 /* --- Layout Helpers --- */
 .content-placeholder {
-    height: 200px;
+    height: auto;
     background: white;
     width: 100%;
 }
