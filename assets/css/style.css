@@ -546,19 +546,9 @@ button:active {
     /* No scaling prevents "jitter" */
 }
 
-/* Fix for Hero Buttons flickering */
-#bt_1,
-#bt_2 {
-    transition: background 0.2s ease, color 0.2s ease;
-    filter: none !important;
-    /* Remove brightness filters which cause white flashes */
-}
 
-#bt_1:hover {
-    background: #0036a8;
-    /* Darker blue solid */
-    transform: none;
-}
+
+
 
 /* COUNTER SECTION */
 #div_3 {
