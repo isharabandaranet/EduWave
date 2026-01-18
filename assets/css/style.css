@@ -44,6 +44,7 @@ header {
     display: flex;
     padding-top: 38px;
     padding-right: 164px;
+    align-items: center;
 }
 
 /* Replaced .nav_bar_item with #nav_bar a */
@@ -67,6 +68,70 @@ header {
 #nav_bar a.active {
     color: #35C4FC;
     text-shadow: 0 0 10px rgba(53, 196, 252, 0.5);
+}
+
+/* Container for the dropdown */
+.dropdown {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+.dropbtn {
+    display: flex;
+    align-items: center;
+    line-height: normal;
+}
+/* The small triangle (CSS Arrow) */
+.arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    vertical-align: middle;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid black; /* Triangle pointing down */
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow and change color on hover */
+.dropdown:hover .arrow {
+    border-top-color: #35C4FC;
+    transform: rotate(180deg);
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    top: 100%; /* Positions it directly below the nav item */
+    left: 0;
+    border-radius: 4px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black !important; /* Overriding previous nav styles if needed */
+    padding: 12px 16px !important;
+    font-size: 16px !important;
+    display: block;
+    text-align: left;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #35C4FC !important;
+    transform: none !important; /* Prevents the 'jump' from the parent style */
+}
+
+/* Show the menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* HOME SECTION */
