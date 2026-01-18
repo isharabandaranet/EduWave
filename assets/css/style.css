@@ -31,22 +31,26 @@ header {
     left: 0;
     z-index: 1000;
     background-color: white;
+    
+    /* ADDED THESE FOR PREVENTING OVERLAP */
+    display: flex;
+    justify-content: space-between; /* Pushes logo to left, nav to right */
+    align-items: center;            /* Centers them vertically */
+    padding: 0 5%;                  /* Use % instead of px for flexible side gaps */
+    box-sizing: border-box;         /* Ensures padding doesn't break width */
 }
 
 #img_logo {
-    position: relative;
-    top: 10px;
-    left: 107px;
+    /* REMOVED: position relative, top, and left */
+    display: block;
 }
 
 #nav_bar {
-    float: right;
+    /* REMOVED: float: right and padding-top/right */
     display: flex;
-    padding-top: 38px;
-    padding-right: 164px;
     align-items: center;
+    gap: 10px; /* Adjusts space between links */
 }
-
 /* Replaced .nav_bar_item with #nav_bar a */
 #nav_bar a {
     color: black;
