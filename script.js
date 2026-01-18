@@ -1,4 +1,6 @@
-
+document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('nav_bar').classList.toggle('active');
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     const counters = document.querySelectorAll(".counter");

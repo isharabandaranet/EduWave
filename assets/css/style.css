@@ -45,6 +45,19 @@ header {
     display: block;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: black;
+}
+
 #nav_bar {
     /* REMOVED: float: right and padding-top/right */
     display: flex;
@@ -136,6 +149,26 @@ header {
 /* Show the menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    #nav_bar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        background: white;
+        padding: 20px;
+    }
+    
+    #nav_bar.active {
+        display: flex;
+    }
 }
 
 /* HOME SECTION */
