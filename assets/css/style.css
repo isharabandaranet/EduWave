@@ -1069,3 +1069,141 @@ button:active {
         flex-direction: column;
     }
 }
+
+
+/* END OF FOOTER */
+
+/*about us section*/
+
+/* --- Header Section --- */
+.page-header {
+    background: linear-gradient(135deg, #2ab5f6 0%, #0055ff 100%); /* Blue Gradient */
+    padding: 60px 20px;
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 250px; /* Adjust based on preference */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.breadcrumb {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.header-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+/* --- Main Layout Container --- */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/* --- Feature Rows (The Zig-Zag Layout) --- */
+.feature-row {
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: space-between;
+    gap: 50px; /* Space between text and image */
+    margin-bottom: 80px; /* Space between rows */
+}
+
+/* Column Settings */
+.text-col {
+    flex: 1; /* Takes up 50% width */
+}
+
+.image-col {
+    flex: 1; /* Takes up 50% width */
+    display: flex;
+    justify-content: center;
+}
+
+/* --- Typography & Decoration --- */
+.text-col h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #000;
+}
+
+.text-col p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.decorative-line {
+    height: 4px;
+    width: 100px;
+    background-color: #cceeff;
+    border-radius: 2px;
+}
+
+/* Specific alignment for the second row */
+.align-right-text {
+    text-align: right;
+}
+
+.float-right {
+    margin-left: auto; /* Pushes the line to the right */
+}
+
+/* --- The Blue Image Placeholder Shape --- */
+.image-placeholder {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    background-color: #d0f0fd; /* Light blue color */
+    border-radius: 40px; /* Rounded corners */
+}
+
+/* --- Responsive Design (Mobile) --- */
+/* This ensures no overlapping occurs on small screens */
+@media (max-width: 768px) {
+    .feature-row {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center text on mobile */
+        gap: 30px;
+    }
+
+    /* Keep the visual order: Image top or bottom depending on preference. 
+       Here we make sure the text comes first, then image, or allow natural stacking. */
+    .feature-row.reverse-layout {
+        flex-direction: column-reverse; /* For the second row, keep image on top or bottom */
+    }
+
+    .text-col h2 {
+        font-size: 28px;
+    }
+
+    .align-right-text {
+        text-align: center;
+    }
+    
+    .decorative-line, .float-right {
+        margin: 0 auto; /* Center the line on mobile */
+    }
+    
+    .image-placeholder {
+        height: 300px; /* Smaller square on mobile */
+    }
+}
