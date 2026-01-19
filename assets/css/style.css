@@ -1128,3 +1128,95 @@ button:active {
     .right_01 .line_01, .line_01 { margin: 0 auto; }
     .box_01 { height: 300px; }
 }
+
+/* OUR TEAM SECTION */
+
+#div_team {
+    width: 100%;
+    /* Changed background to light blue to match the reference image */
+    background: #cbf3ff; 
+    padding: 60px 20px;
+    color: #001d3d; /* Kept your original font color */
+    text-align: center;
+}
+
+/* Cards container */
+.team_cards_container {
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Space between cards */
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* This allows the 3-up, 2-down layout */
+}
+
+/* Individual card */
+.team_card {
+    height: 350px; /* Fixed height for uniformity */
+    width: 300px; /* Adjusted width slightly to fit 3 in a row */
+    background: white; /* White card background per image */
+    border-radius: 40px; /* Large rounded corners per image */
+    padding: 30px 20px;
+    align-content: center;
+    position: relative;
+    overflow: hidden; /* Important for the shimmer effect and rounded corners */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* Added soft shadow for depth */
+    transition: transform 0.3s ease;
+}
+
+.team_card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* --- KEEPING YOUR ORIGINAL SHIMMER EFFECT --- */
+.team_card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.6), /* Kept white shimmer */
+            transparent);
+    transform: skewX(-20deg);
+    pointer-events: none;
+}
+
+.team_card:hover::before {
+    animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -150%; }
+    100% { left: 150%; }
+}
+/* ------------------------------------------ */
+
+/* Image */
+.team_card img {
+    width: 180px; /* Adjusted size to fit card better */
+    height: auto;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/* Card Name (New) */
+.member-name {
+    font-size: 18px;
+    color: #001d3d; /* Kept your dark blue */
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+/* Card Role (New) */
+.member-role {
+    font-size: 13px;
+    color: #777; /* Lighter grey for role */
+    margin: 0;
+    text-transform: uppercase; /* Makes the role look professional */
+    letter-spacing: 1px;
+}
