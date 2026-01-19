@@ -1075,135 +1075,56 @@ button:active {
 
 /*about us section*/
 
-/* --- Header Section --- */
-.page-header {
-    background: linear-gradient(135deg, #2ab5f6 0%, #0055ff 100%); /* Blue Gradient */
-    padding: 60px 20px;
-    position: relative;
-    text-align: center;
-    color: white;
-    height: 250px; /* Adjust based on preference */
+/* Header */
+#head_01 {
+    background: linear-gradient(135deg, #2ab5f6, #0055ff);
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
 }
+#head_01 span { position: absolute; top: 20px; left: 20px; font-size: 14px; opacity: 0.8; }
+#head_01 h1 { font-size: 48px; margin-bottom: 5px; }
 
-.breadcrumb {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 14px;
-    font-weight: 300;
-    opacity: 0.9;
+/* Wrapper */
+#main_01 { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+
+/* Layout Grid */
+.row_01 { display: flex; align-items: center; gap: 60px; margin-bottom: 80px; }
+.text_01, .img_01 { flex: 1; }
+.img_01 { display: flex; justify-content: center; }
+
+/* Text Styling & Hover Effect */
+.text_01 h2 { font-size: 36px; margin-bottom: 20px; }
+.text_01 p { 
+    color: #666; line-height: 1.6; margin-bottom: 20px; 
+    transition: 0.3s; border-left: 0px solid #2ab5f6; 
 }
+.text_01 p:hover { color: #000; padding-left: 15px; border-left-width: 4px; }
 
-.header-content h1 {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 10px;
+/* Decorative Line */
+.line_01 { width: 100px; height: 4px; background: #cceeff; border-radius: 2px; }
+
+/* Alignment Helpers */
+.right_01 { text-align: right; }
+.right_01 .line_01 { margin-left: auto; }
+
+/* Box Styling & Hover Effect */
+.box_01 {
+    width: 100%; max-width: 400px; height: 400px;
+    background: #d0f0fd; border-radius: 40px; cursor: pointer;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+.box_01:hover { transform: translateY(-15px) scale(1.02); box-shadow: 0 20px 40px rgba(42, 181, 246, 0.3); }
 
-.header-content p {
-    font-size: 14px;
-    font-weight: 300;
-    opacity: 0.8;
-}
-
-/* --- Main Layout Container --- */
-.main-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px 20px;
-}
-
-/* --- Feature Rows (The Zig-Zag Layout) --- */
-.feature-row {
-    display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: space-between;
-    gap: 50px; /* Space between text and image */
-    margin-bottom: 80px; /* Space between rows */
-}
-
-/* Column Settings */
-.text-col {
-    flex: 1; /* Takes up 50% width */
-}
-
-.image-col {
-    flex: 1; /* Takes up 50% width */
-    display: flex;
-    justify-content: center;
-}
-
-/* --- Typography & Decoration --- */
-.text-col h2 {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 25px;
-    color: #000;
-}
-
-.text-col p {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-.decorative-line {
-    height: 4px;
-    width: 100px;
-    background-color: #cceeff;
-    border-radius: 2px;
-}
-
-/* Specific alignment for the second row */
-.align-right-text {
-    text-align: right;
-}
-
-.float-right {
-    margin-left: auto; /* Pushes the line to the right */
-}
-
-/* --- The Blue Image Placeholder Shape --- */
-.image-placeholder {
-    width: 100%;
-    max-width: 400px;
-    height: 400px;
-    background-color: #d0f0fd; /* Light blue color */
-    border-radius: 40px; /* Rounded corners */
-}
-
-/* --- Responsive Design (Mobile) --- */
-/* This ensures no overlapping occurs on small screens */
+/* Mobile */
 @media (max-width: 768px) {
-    .feature-row {
-        flex-direction: column; /* Stack items vertically */
-        text-align: center; /* Center text on mobile */
-        gap: 30px;
-    }
-
-    /* Keep the visual order: Image top or bottom depending on preference. 
-       Here we make sure the text comes first, then image, or allow natural stacking. */
-    .feature-row.reverse-layout {
-        flex-direction: column-reverse; /* For the second row, keep image on top or bottom */
-    }
-
-    .text-col h2 {
-        font-size: 28px;
-    }
-
-    .align-right-text {
-        text-align: center;
-    }
-    
-    .decorative-line, .float-right {
-        margin: 0 auto; /* Center the line on mobile */
-    }
-    
-    .image-placeholder {
-        height: 300px; /* Smaller square on mobile */
-    }
+    .row_01 { flex-direction: column; text-align: center; gap: 40px; }
+    .rev_01 { flex-direction: column-reverse; }
+    .right_01 { text-align: center; }
+    .right_01 .line_01, .line_01 { margin: 0 auto; }
+    .box_01 { height: 300px; }
 }
