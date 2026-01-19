@@ -1037,6 +1037,7 @@ button:active {
     text-align: center;
     color: #fff;
     position: relative;
+    padding-top: 5%;
 }
 #head_01 span { position: absolute; top: 20px; left: 20px; font-size: 14px; opacity: 0.8; }
 #head_01 h1 { font-size: 48px; margin-bottom: 5px; }
