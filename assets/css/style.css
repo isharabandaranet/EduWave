@@ -1295,3 +1295,25 @@ button:active {
     margin-top: 5%;
     margin-bottom: 15%;
 }
+
+/* logo page */
+
+.circle_login {
+    width: 160px;
+    height: 160px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 5px solid #0d52eb;
+}
+.pricing-badge-login {
+    font-size: 1.8rem;
+    padding: 10px 30px;
+    border-radius: 15px 45px 15px 45px;
+    margin-top: -80px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #35C4FC 0%, #024CEA 100%);
+    color: #ffffff;
+    font-weight: 800;
+    z-index: 2;
+    box-shadow: 0 10px 25px rgba(0, 86, 224, 0.35);
+}
