@@ -1291,7 +1291,7 @@ button:active {
 .row_01_service{
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 120px;
     margin-top: 5%;
     margin-bottom: 15%;
 }
@@ -1299,8 +1299,8 @@ button:active {
 /* logo page */
 
 .circle_login {
-    width: 160px;
-    height: 160px;
+    width: 80px;
+    height: 80px;
     background-color: transparent;
     border-radius: 50%;
     border: 5px solid #0d52eb;
@@ -1316,4 +1316,38 @@ button:active {
     font-weight: 800;
     z-index: 2;
     box-shadow: 0 10px 25px rgba(0, 86, 224, 0.35);
+}
+
+.login_h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #000000;
+    text-align: center;
+}
+
+
+.login_section {
+    align-items: center;
+    justify-content: center;
+    padding: auto;;
+}
+
+.line_01_login {
+    width: 20%;
+    height: 4px;
+    background: #0d52eb;
+    border-radius: 2px;
+    margin: 0 auto; 
+    display: block; 
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    gap: 0;
+    margin-top: 60px;
+    margin-bottom: 40px;
 }
