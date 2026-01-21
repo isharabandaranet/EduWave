@@ -14,30 +14,32 @@
     <!-- HEADER -->
     <div>
         <header>
-        <img id="img_logo" src="assets/img/Logo-Black-C.png" alt="EduWave Logo">
+            <img id="img_logo" src="assets/img/Logo-Black-C.png" alt="EduWave Logo">
 
-        <div class="hamburger" id="hamburger" aria-expanded="false" aria-label="Toggle navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <nav id="nav_bar">
-            <a href="#home_set">Home</a>
-            
-            <div class="dropdown" id="services-dropdown">
-                <a href="#services_set" class="dropbtn">Services <span class="arrow"></span></a>
-                <div class="dropdown-content">
-                    <a href="#service1">Web Design</a>
-                    <a href="#service2">SEO Marketing</a>
-                    <a href="#service3">App Development</a>
-                </div>
+            <div class="hamburger" id="hamburger" aria-expanded="false" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
 
-            <a href="#about_set">About Us</a>
-            <a href="#contact_set">Contact Us</a>
-        </nav>
-    </header>
+            <nav id="nav_bar">
+                <a href="#home_set">Home</a>
+
+                <div class="dropdown" id="services-dropdown">
+                    <a href="#services_set" class="dropbtn">Services <span class="arrow"></span></a>
+                    <div class="dropdown-content">
+                        <a href="#service1">Web Design</a>
+                        <a href="#service2">SEO Marketing</a>
+                        <a href="#service3">App Development</a>
+                    </div>
+                </div>
+
+                <a href="#about_set">About Us</a>
+                <a href="#contact_set">Contact Us</a>
+                <button id="openLoginBtn">Join for free</button>
+
+            </nav>
+        </header>
 
     </div>
 
@@ -483,6 +485,65 @@
         </div>
     </footer>
 
+    <div class="popup-overlay">
+        <section id="login_section">
+             <span class="close-btn" id="closeBtn">&times;</span>
+            <h2 class="login_h2">Choose a platform to login</h2>
+            <div class="line_01_login"></div>
+
+            <div class="login-container">
+
+                <!-- Card 1 -->
+                <div class="pricing-card">
+                    <div class="avatar-section">
+                        <div class="pricing-badge-login">Coach</div>
+                        <div class="circle_login"></div>
+                    </div>
+                    <h2 class="pricing-title">Student Coaching</h2>
+                    <p class="pricing-desc">
+                        Business building it before the tab providet management, Payroll & Worksite Services
+                        full-fledged.
+                    </p><br>
+                    <button class="pricing-btn">Select</button>
+
+                </div>
+
+                <!-- Card 2 (Featured) -->
+                <div class="pricing-card">
+
+                    <div class="avatar-section">
+                        <div class="pricing-badge-login">Learn</div>
+                        <div class="circle_login"></div>
+                    </div>
+
+                    <h2 class="pricing-title">Past papers</h2>
+                    <p class="pricing-desc">
+                        Business building it before the tab providet management, Payroll & Worksite Services
+                        full-fledged.
+                    </p><br>
+                    <button class="pricing-btn">Select</button>
+
+
+                </div>
+
+                <!-- Card 3 -->
+                <div class="pricing-card">
+                    <div class="avatar-section">
+                        <div class="pricing-badge-login">Classes</div>
+                        <div class="circle_login"></div>
+                    </div>
+                    <h2 class="pricing-title">Live Classes</h2>
+                    <p class="pricing-desc">
+                        Business building it before the tab providet management, Payroll & Worksite Services
+                        full-fledged.
+                    </p><br>
+                    <button class="pricing-btn">Select</button>
+
+                </div>
+
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>

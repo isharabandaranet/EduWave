@@ -72,3 +72,35 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+
+// --- 4. Popup Login Section Logic ---
+
+document.addEventListener("DOMContentLoaded", function () {
+    const overlay = document.getElementById('popupOverlay');
+    const openBtn = document.getElementById('openLoginBtn');
+    const closeBtn = document.getElementById('closeBtn');
+
+    // Open
+    if(openBtn) {
+        openBtn.addEventListener('click', () => {
+            overlay.classList.add('active');
+        });
+    }
+
+    // Close on X
+    if(closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            overlay.classList.remove('active');
+        });
+    }
+
+    // Close on background click
+    if(overlay) {
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                overlay.classList.remove('active');
+            }
+        });
+    }
+});

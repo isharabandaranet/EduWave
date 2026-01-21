@@ -1099,7 +1099,7 @@ button:active {
     margin-bottom: 20px;
     transition: 0.3s;
     border-left: 0px solid #2ab5f6;
-    
+
 }
 
 /* Hover Effect for Left Aligned Text */
@@ -1288,7 +1288,7 @@ button:active {
 
 }
 
-.row_01_service{
+.row_01_service {
     display: flex;
     align-items: center;
     gap: 120px;
@@ -1296,7 +1296,17 @@ button:active {
     margin-bottom: 15%;
 }
 
-/* logo page */
+/* login section */
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+}
 
 .circle_login {
     width: 80px;
@@ -1305,6 +1315,7 @@ button:active {
     border-radius: 50%;
     border: 5px solid #0d52eb;
 }
+
 .pricing-badge-login {
     font-size: 1.8rem;
     padding: 10px 30px;
@@ -1330,7 +1341,8 @@ button:active {
 .login_section {
     align-items: center;
     justify-content: center;
-    padding: auto;;
+    padding: auto;
+    ;
 }
 
 .line_01_login {
@@ -1338,8 +1350,8 @@ button:active {
     height: 4px;
     background: #0d52eb;
     border-radius: 2px;
-    margin: 0 auto; 
-    display: block; 
+    margin: 0 auto;
+    display: block;
 }
 
 .login-container {
@@ -1350,4 +1362,33 @@ button:active {
     gap: 0;
     margin-top: 60px;
     margin-bottom: 40px;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Dark background */
+    backdrop-filter: blur(4px);
+    /* Blur effect */
+    z-index: 1000;
+
+    /* Centering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Transition / Hidden State */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Active State */
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
