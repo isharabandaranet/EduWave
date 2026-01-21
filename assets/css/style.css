@@ -1301,11 +1301,10 @@ button:active {
 .close-btn {
     position: absolute;
     top: 20px;
-    right: 30px;
-    font-size: 30px;
+    right: 40px;
+    font-size: 70px;
     cursor: pointer;
-    font-weight: bold;
-    color: #333;
+    color: #000000;
 }
 
 .circle_login {
