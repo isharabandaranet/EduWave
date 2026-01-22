@@ -1390,3 +1390,121 @@ button:active {
     opacity: 1;
     visibility: visible;
 }
+
+
+/*Contact Page*/
+
+
+
+
+/* Main section */
+#contact-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6%;
+}
+
+/* Heading */
+#contact-section h2 {
+    width: 100%;
+    font-size: 2.2rem;
+    color: #2a0a6c;
+    margin-bottom: 4%;
+}
+
+/* Form card */
+#contact-form {
+    width: 38%;
+    background: linear-gradient(to bottom, #2f80ed, #3db6ff);
+    padding: 6%;
+    border-radius: 2rem;
+    color: #ffffff;
+}
+
+/* Labels */
+#contact-form label {
+    display: block;
+    margin-top: 5%;
+    font-size: 0.85rem;
+}
+
+/* Inputs */
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    margin-top: 2%;
+    padding: 4%;
+    border: none;
+    border-radius: 2rem;
+    outline: none;
+}
+
+/* Message box */
+#contact-form textarea {
+    height: 25%;
+    resize: none;
+}
+
+/* Submit button */
+.submit-btn {
+    margin-top: 6%;
+    float: right;
+    padding: 2% 8%;
+    background: #2a0a6c;
+    color: #ffffff;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+/* Right info section */
+.contact-info {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    gap: 12%;
+    margin-top: 4%;
+}
+
+/* Info rows */
+.info-item {
+    display: flex;
+    gap: 6%;
+    align-items: flex-start;
+}
+
+.icon {
+    font-size: 1.6rem;
+    color: #2f80ed;
+}
+
+/* Info text */
+.info-item h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.info-item p {
+    margin-top: 4%;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    #contact-section {
+        flex-direction: column;
+    }
+
+    #contact-form,
+    .contact-info {
+        width: 100%;
+    }
+
+    .submit-btn {
+        width: 100%;
+        float: none;
+    }
+}
