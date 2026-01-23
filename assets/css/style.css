@@ -24,6 +24,33 @@ button,
     cursor: url('../img/cursor.png') 0 0, pointer !important;
 }
 
+/* PRELOADER */
+#preloader {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease;
+}
+
+#preloader img {
+    width: 150px;
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
 /* --- HEADER --- */
 header {
     width: 100%;
