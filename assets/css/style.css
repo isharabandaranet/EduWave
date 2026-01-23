@@ -1422,139 +1422,109 @@ button:active {
 /*Contact Page*/
 
 
-
-
-/* Main section */
+/* Main section wrapper to handle full page width */
 #contact-section {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 6%;
+    justify-content: center; /* Centers the content-container horizontally */
+    align-items: center;     /* Centers vertically if the section has height */
+    padding: 80px 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9; /* Optional: light background to see centering */
+}
+
+/* Inner container that holds form and info */
+.contact-container {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    padding: 100px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-/* Heading */
-#contact-section h2 {
+    align-items: flex-start;
+    gap: 60px; /* Space between form and info */
+    max-width: 1200px; /* Limits width so it doesn't stretch too far */
     width: 100%;
-    font-size: 2.2rem;
-    color: #000000;
-    margin-bottom: 4%;
-    text-align: center;
 }
 
-/* Form card */
-
-
+/* Form card styling */
 #contact-form {
-    width: 38%;
+    flex: 0 1 500px; /* Fixed base size, can shrink */
     background: linear-gradient(to bottom, #2f80ed, #3db6ff);
-    padding: 6%;
+    padding: 40px;
     border-radius: 2rem;
     color: #ffffff;
     border: #024CEA 0.2rem solid;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 #contact-form h2 {
-    width: 100%;
-    font-size: 2rem;
-    color: #ffffff;
-    margin-bottom: 4%;
-    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: left;
 }
 
-
-#contact-form #desc_contact {
-    display: block;
-    font-size: 1rem;
-    margin-bottom: 6%;
-    line-height: 1.4;
-    font-weight: normal;
-}
-/* Labels */
 #contact-form label {
     display: block;
-    width: 100%;
-    margin-top: 5%;
-    padding-left: 5%;
-    color: #ffffff;
-    font-size: 1.2rem;
+    margin-top: 15px;
     font-weight: bold;
 }
 
-
-/* Inputs */
-#contact-form input,
+#contact-form input, 
 #contact-form textarea {
     width: 100%;
-    margin-top: 2%;
-    padding: 4%;
+    padding: 12px 15px;
+    margin-top: 5px;
+    border-radius: 1rem;
     border: none;
-    border-radius: 2rem;
-    outline: none;
+    box-sizing: border-box;
 }
 
-/* Message box */
-#contact-form textarea {
-    height: 25%;
-    resize: none;
-}
-
-/* Submit button */
 .submit-btn {
-    margin-top: 6%;
-    float: right;
-    padding: 2% 8%;
-    background: #2a0a6c;
-    color: #ffffff;
-    border: none;
+    margin-top: 20px;
+    padding: 10px 30px;
     border-radius: 2rem;
+    border: none;
+    background: #2a0a6c;
+    color: white;
     cursor: pointer;
+    font-weight: bold;
+    float: right;
 }
 
-/* Right info section */
+/* Info section styling */
 .contact-info {
-    width: 32%;
+    flex: 0 1 350px; /* Fixed base size */
     display: flex;
     flex-direction: column;
-    margin-top: 4%;
+    gap: 35px;
+    padding-top: 20px;
 }
 
-/* Info rows */
 .info-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    gap: 15px;
 }
 
-
-/* Info text */
 .info-item h3 {
-    margin: 0;
-    font-size: 1.1rem;
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
 }
 
 .info-item p {
-    margin-top: 4%;
-    font-size: 0.9rem;
-    color: #444;
+    margin: 0;
+    color: #555;
     line-height: 1.5;
 }
 
-/* Mobile */
+/* Responsive: Stack them on top of each other on mobile */
 @media (max-width: 900px) {
-    #contact-section {
+    .contact-container {
         flex-direction: column;
+        align-items: center;
+        gap: 40px;
     }
-
-    #contact-form,
-    .contact-info {
+    
+    #contact-form, .contact-info {
+        flex: 1 1 100%;
         width: 100%;
-    }
-
-    .submit-btn {
-        width: 100%;
-        float: none;
     }
 }
