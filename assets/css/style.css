@@ -568,6 +568,7 @@ button:active {
     min-height: 100vh;
     background: #D2F4FF;
     padding-top: 80px;
+    padding-bottom: 40px;
 }
 
 #pt_1,
@@ -1527,4 +1528,140 @@ button:active {
         flex: 1 1 100%;
         width: 100%;
     }
+}
+
+
+
+/* Learn */
+
+
+#main_01 h1 {
+    font-size: 5rem;
+    color: #002e8c;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+
+.feature-card {
+  background: #e7f7ff;
+  border-radius: 80px 0 140px 0;
+  overflow: hidden;
+  position: relative;
+  min-height: 260px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+}
+
+/* SHIMMER EFFECT */
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+.feature-card:hover::before {
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+/* ----------- existing card styles ----------- */
+
+.card-top {
+  position: relative;
+  height: 120px;
+}
+
+/* Base number block (color decided by card type) */
+.card-number {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 44%;
+  height: 100%;
+  border-radius: 80px 0 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+/* Card type 1 – normal blue */
+.card-blue .card-number {
+  background: #0067ff;
+}
+
+/* Card type 2 – light blue */
+.card-light-blue .card-number {
+  background: #00c4ff;
+}
+
+/* Stripes on the right top */
+.card-stripes {
+  position: absolute;
+  top: 18px;
+  right: 28px;
+  display: flex;
+  gap: 10px;
+}
+
+.card-stripes span {
+  display: block;
+  width: 18px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #7cc5ff, #4d8dff);
+}
+
+.card-stripes span:nth-child(1) {
+  height: 70px;
+}
+.card-stripes span:nth-child(2) {
+  height: 95px;
+}
+.card-stripes span:nth-child(3) {
+  height: 80px;
+}
+
+/* Text area */
+.card-content {
+  padding: 22px 32px 30px;
+}
+
+.card-content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.card-content p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #4b5563;
 }
