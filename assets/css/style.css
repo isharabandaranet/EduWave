@@ -11,7 +11,8 @@ body {
     font-family: Montserrat, sans-serif;
     cursor: url('../img/cursor.png') 0 0, auto;
     overflow-x: hidden;
-
+    flex-wrap: wrap;
+   
 
 }
 
