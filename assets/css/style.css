@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
-/* FIX: Prevent horizontal overflow */
-html, body {
-    overflow-x: hidden;
-    max-width: 100%;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -1576,5 +1566,45 @@ button:active {
 
     .card-number {
         font-size: 36px;
+    }
+}
+
+/* MOBILE OVERFLOW FIX */
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+}
+
+@media (max-width: 768px) {
+    * {
+        max-width: 100vw;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    #img_home {
+        width: 100% !important;
+        max-width: 400px !important;
+    }
+    
+    section, div, main, article, aside, footer, header {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .pricing-card {
+        margin: 10px 0 !important;
+    }
+    
+    .cta-card {
+        width: 90% !important;
+        padding: 25px 20px !important;
+    }
+    
+    .row_01, .row_01_service {
+        padding: 0 20px;
     }
 }
