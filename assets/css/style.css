@@ -1403,31 +1403,60 @@ button:active {
     display: flex;
     flex-wrap: wrap;
     gap: 6%;
+    justify-content: center;
+    padding: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 /* Heading */
 #contact-section h2 {
     width: 100%;
     font-size: 2.2rem;
-    color: #2a0a6c;
+    color: #000000;
     margin-bottom: 4%;
+    text-align: center;
 }
 
 /* Form card */
+
+
 #contact-form {
     width: 38%;
     background: linear-gradient(to bottom, #2f80ed, #3db6ff);
     padding: 6%;
     border-radius: 2rem;
     color: #ffffff;
+    border: #024CEA 0.2rem solid;
 }
 
+#contact-form h2 {
+    width: 100%;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 4%;
+    text-align: center;
+}
+
+
+#contact-form #desc_contact {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 6%;
+    line-height: 1.4;
+    font-weight: normal;
+}
 /* Labels */
 #contact-form label {
     display: block;
+    width: 100%;
     margin-top: 5%;
-    font-size: 0.85rem;
+    padding-left: 5%;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
+
 
 /* Inputs */
 #contact-form input,
