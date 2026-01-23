@@ -1431,7 +1431,7 @@ button:active {
     align-items: center;     /* Centers vertically if the section has height */
     padding: 80px 20px;
     box-sizing: border-box;
-    background-color: #f9f9f9; /* Optional: light background to see centering */
+    background-color: #ffffff; /* Optional: light background to see centering */
 }
 
 /* Inner container that holds form and info */
@@ -1564,6 +1564,8 @@ button:active {
   content: "";
   position: absolute;
   top: 0;
+
+  
   left: -150%;
   width: 50%;
   height: 100%;
