@@ -695,6 +695,7 @@ button:active {
 }
 
 /* FOOTER */
+
 .footer-section {
     background-color: #dcf6ff;
     position: relative;
@@ -714,6 +715,7 @@ button:active {
     top: -100px;
     left: 50%;
     transform: translateX(-50%);
+    margin-bottom: 5%;
 }
 
 .cta-content {
@@ -755,7 +757,7 @@ button:active {
 
 .footer-container {
     max-width: 1100px;
-    margin: 100px auto 0;
+    margin: 140px auto 0;
     padding: 60px 20px;
 }
 
