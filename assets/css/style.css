@@ -367,7 +367,7 @@ button:active {
 .pricing-card .circle {
     width: 160px;
     height: 160px;
-    background-color: #ffffff;
+    background-color: #000000;
     border-radius: 50%;
 }
 
@@ -472,7 +472,7 @@ button:active {
 .card-title {
     font-size: 24px;
     font-weight: 800;
-    color: #002e8c;
+    color: #000000;
     margin: 0 0 15px;
 }
 
@@ -889,7 +889,7 @@ button:active {
 #main_01 {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 0px 20px;
 }
 
 #main_01 h1 {
@@ -904,6 +904,14 @@ button:active {
     gap: 60px;
     margin-bottom: 80px;
 }
+
+.row_01_about {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    
+}
+
 
 .text_01,
 .img_01 {
@@ -983,7 +991,7 @@ button:active {
     width: 100%;
     background: #cbf3ff;
     padding: 60px 20px;
-    color: #001d3d;
+    color: #000000;
     text-align: center;
 }
 
@@ -1024,7 +1032,7 @@ button:active {
 
 .member-name {
     font-size: 18px;
-    color: #001d3d;
+    color: #000000;
     font-weight: 700;
     margin: 0 0 10px;
 }
