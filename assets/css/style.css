@@ -358,8 +358,12 @@ button:active {
 .pricing-card .circle {
     width: 160px;
     height: 160px;
-    background-color: #666666;
+    background-color: #ffffff;
     border-radius: 50%;
+}
+.pricing-card .circle_img {
+    width: 140px;
+    height: 140px;
 }
 
 .pricing-badge {
