@@ -377,6 +377,13 @@ button:active {
     margin-top: 25px;
 }
 
+.pricing-card .circle_img_login {
+    width: 100px;
+    height: 100px;
+    
+}
+
+
 .pricing-badge {
     font-size: 1.8rem;
     padding: 10px 30px;
@@ -1095,7 +1102,7 @@ button:active {
     height: 80px;
     background-color: transparent;
     border-radius: 50%;
-    border: 5px solid #0d52eb;
+
 }
 
 .pricing-badge-login {
