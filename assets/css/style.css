@@ -374,6 +374,7 @@ button:active {
 .pricing-card .circle_img {
     width: 110px;
     height: 110px;
+    margin-top: 25px;
 }
 
 .pricing-badge {
