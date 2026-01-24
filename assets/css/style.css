@@ -703,6 +703,11 @@ button:active {
     padding-top: 70px;
 }
 
+.footer-section-contact {
+    background-color: #dcf6ff;
+    margin-top: -45px;
+}
+
 .cta-card {
     background: linear-gradient(90deg, #1c75f0 0%, #3bc1fa 100%);
     width: 85%;
