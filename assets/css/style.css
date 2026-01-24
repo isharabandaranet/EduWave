@@ -147,7 +147,7 @@ header {
     min-width: 180px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
     z-index: 1001;
-    top: calc(100% + 10px);
+    top: 100%;
     left: 0;
     border-radius: 8px;
     overflow: hidden;
@@ -1579,4 +1579,6 @@ button:active {
         font-size: 36px;
     }
 }
+
+
 

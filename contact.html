@@ -26,20 +26,22 @@
                 <a href="index.html">Home</a>
 
                 <div class="dropdown" id="services-dropdown">
-                    <a href="#services_set" class="dropbtn">Services <span class="arrow"></span></a>
+                    <a href="services.html" class="dropbtn">Services <span class="arrow"></span></a>
                     <div class="dropdown-content">
-                        <a href="#service1">Web Design</a>
-                        <a href="#service2">SEO Marketing</a>
-                        <a href="#service3">App Development</a>
+                        <a href="learn.html">Learn</a>
+                        <a href="coach.html">Coach</a>
+                        <a href="classes.html">Classes</a>
                     </div>
                 </div>
 
-                <a href="#about_set">About Us</a>
-                <a href="#contact_set">Contact Us</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <button id="openLoginBtn" class="pricing-btn">Log In</button>
+
             </nav>
         </header>
-    </div>
 
+    </div>
     <div id="head_01">
         <span>Home > Contact</span>
         <div>
@@ -173,6 +175,65 @@
             <p>Copyright © 2026 - Desinup Group - All rights reserved.</p>
         </div>
     </footer>
+    <!-- Pop-up window -->
+
+    <div class="popup-overlay" id="popupOverlay">
+        <section id="login_section">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <h2 class="login_h2">Choose a platform to login</h2>
+            <div class="line_01_login"></div>
+
+            <div class="login-container">
+
+                <!-- Card 1 -->
+                <div class="pricing-card">
+                    <div class="avatar-section">
+                        <div class="pricing-badge-login">Coach</div>
+                        <div class="circle_login"></div>
+                    </div>
+                    <h2 class="pricing-title">Student Coaching</h2>
+                    <p class="pricing-desc">
+                        Business building it before the tab providet management, Payroll & Worksite Services
+                        full-fledged.
+                    </p><br>
+                    <a href="https://coach.eduwave.lk/dashboard"><button class="pricing-btn">Select</button></a>
+
+                </div>
+
+                <!-- Card 2 (Featured) -->
+                <div class="pricing-card">
+
+                    <div class="avatar-section">
+                        <div class="pricing-badge-login">Learn</div>
+                        <div class="circle_login"></div>
+                    </div>
+
+                    <h2 class="pricing-title">Past papers</h2>
+                    <p class="pricing-desc">
+                        Business building it before the tab providet management, Payroll & Worksite Services
+                        full-fledged.
+                    </p><br>
+                    <a href="https://learn.eduwave.lk/dashboard"><button class="pricing-btn">Select</button></a>
+
+                </div>
+
+                <!-- Card 3 -->
+                <div class="pricing-card">
+                    <div class="avatar-section">
+                        <div class="pricing-badge-login">Classes</div>
+                        <div class="circle_login"></div>
+                    </div>
+                    <h2 class="pricing-title">Live Classes</h2>
+                    <p class="pricing-desc">
+                        Business building it before the tab providet management, Payroll & Worksite Services
+                        full-fledged.
+                    </p><br>
+                    <a href="https://classes.eduwave.lk/dashboard"><button class="pricing-btn">Select</button></a>
+                </div>
+
+            </div>
+        </section>
+    </div>
     <div id="preloader">
         <img src="assets/img/loader.gif" alt="Loading">
     </div>
