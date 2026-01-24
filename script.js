@@ -20,19 +20,27 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    /*loader*/
+// Add at the top of your script
+console.log("Preloader element:", document.getElementById("preloader"));
 
-    window.addEventListener("load", function () {
-        const loader = document.getElementById("preloader");
-        if (!loader) return;
+window.addEventListener("load", function () {
+    console.log("Page loaded!"); // Check if this fires
+    
+    const loader = document.getElementById("preloader");
+    
+    if (!loader) {
+        console.log("Preloader not found!");
+        return;
+    }
+    
+    console.log("Adding loader-hidden class");
+    loader.classList.add("loader-hidden");
 
-        loader.classList.add("loader-hidden");
-
-        loader.addEventListener("transitionend", function () {
-            loader.remove();
-        });
+    loader.addEventListener("transitionend", function () {
+        console.log("Transition ended, removing preloader");
+        loader.remove();
     });
-
+});
 
     // --- 2. Counter Animation Logic ---
     const counters = document.querySelectorAll(".counter");
