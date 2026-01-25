@@ -380,7 +380,7 @@ button:active {
 .pricing-card .circle_img_login {
     width: 100px;
     height: 100px;
-    
+
 }
 
 
@@ -909,7 +909,7 @@ button:active {
     display: flex;
     align-items: center;
     gap: 60px;
-    
+
 }
 
 
@@ -1556,11 +1556,11 @@ button:active {
 
     .pricing-card {
         margin-bottom: 15%;
-        
+
     }
 
-    
-    
+
+
     .login-section {
         max-width: 400px;
         margin: 0 auto;
@@ -1572,7 +1572,17 @@ button:active {
         max-height: 0;
 
     }
-    
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+        /* Hover is disabled on mobile */
+    }
+
+    .dropdown.mobile-active .dropdown-content {
+        display: block;
+        /* Needs JavaScript to add this class */
+    }
+
 
 }
 
@@ -1617,14 +1627,16 @@ button:active {
         width: 100%;
         max-width: 300px;
     }
+
     .login-container {
         gap: 0.8%;
 
     }
+
     .login-container .pricing-card {
         padding: 20px 25px;
         max-height: 100px;
-        
+
     }
 
     .login-container .pricing-desc {
@@ -1641,7 +1653,7 @@ button:active {
         max-width: 20px;
         font-size: 0.8rem;
         text-align: center;
-    
+
     }
 
     .login-container .pricing-title {
@@ -1686,12 +1698,18 @@ button:active {
 
     .img-service {
         max-height: 0px;
-        
+
     }
 
     .team_card {
         height: auto;
         padding: 25px 15px;
+    }
+
+    #div_team {
+        padding: 0;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 
     #contact-form {
