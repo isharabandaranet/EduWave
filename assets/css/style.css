@@ -1149,7 +1149,6 @@ button:active {
 
 .login-container {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     z-index: 10;
@@ -1451,12 +1450,16 @@ button:active {
 
     #img_home {
         width: 100%;
-        max-width: 400px;
+        max-width: 600px;
     }
 
     .pricing-container {
         flex-direction: column;
         margin: 80px 0;
+    }
+
+    .pricing-link {
+        margin-top: 5%;
     }
 
     .pricing-card,
@@ -1555,6 +1558,14 @@ button:active {
         margin-bottom: 15%;
         
     }
+
+    
+    
+    .login-section {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -1598,17 +1609,40 @@ button:active {
         width: 100%;
         max-width: 300px;
     }
+    .login-container {
+        gap: 0.8%;
 
-    .pricing-card {
-        padding: 40px 25px;
-        width: 95%;
+    }
+    .login-container .pricing-card {
+        padding: 20px 25px;
+        max-height: 100px;
+        
     }
 
-    .pricing-badge,
-    .pricing-badge-service,
-    .pricing-badge-login {
-        font-size: 1.4rem;
-        padding: 8px 20px;
+    .login-container .pricing-desc {
+        font-size: 0;
+    }
+
+    .login-container .circle_img_login {
+        width: 50px;
+        height: 50px;
+        margin-top: 15px;
+    }
+
+    .login-container .pricing-badge-login {
+        max-width: 20px;
+        font-size: 0.8rem;
+        text-align: center;
+    
+    }
+
+    .login-container .pricing-title {
+        font-size: 1rem;
+    }
+
+    .login-container .pricing-btn {
+        max-width: 80px;
+
     }
 
     .pricing-actions {
@@ -1627,6 +1661,7 @@ button:active {
     #head_01 {
         height: 200px;
         padding-top: 80px;
+        margin-bottom: 60px;
     }
 
     #head_01 h1 {
@@ -1639,6 +1674,11 @@ button:active {
 
     .text_01 h2 {
         font-size: 26px;
+    }
+
+    .img-service {
+        max-height: 0px;
+        
     }
 
     .team_card {
