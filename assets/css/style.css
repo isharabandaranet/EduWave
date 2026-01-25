@@ -592,6 +592,42 @@ button:active {
 }
 
 /* SHIMMER EFFECT (used by multiple cards) */
+
+/* Add this to your CSS */
+#home_set>div:last-child {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* Add this */
+    overflow: hidden;
+    /* Add this */
+}
+
+#img_home {
+    width: 150%;
+    max-width: 300%;
+    height: auto;
+}
+
+/* Add shimmer effect to the image container */
+#home_set>div:last-child::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transform: skewX(-20deg);
+    pointer-events: none;
+}
+
+#home_set>div:last-child:hover::before {
+    animation: shimmer 1.5s infinite;
+}
+
 .Coach_card::before,
 .team_card::before,
 .feature-card::before {
