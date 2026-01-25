@@ -19,6 +19,14 @@ body {
     max-width: 100vw !important;
 }
 
+::-webkit-scrollbar {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #35C4FC;
+    border-radius: 10px;
+}
+
 a,
 span,
 div,
