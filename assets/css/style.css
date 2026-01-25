@@ -1566,6 +1566,14 @@ button:active {
         margin: 0 auto;
     }
 
+    .row_01_about_rev_01 .img_01 {
+
+        max-width: 0;
+        max-height: 0;
+
+    }
+    
+
 }
 
 @media (max-width: 480px) {
