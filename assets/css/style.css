@@ -1157,6 +1157,7 @@ button:active {
 }
 
 .pricing-badge-login {
+    text-align: center;
     font-size: 1.8rem;
     padding: 10px 30px;
     border-radius: 15px 45px 15px 45px;
@@ -1220,6 +1221,24 @@ button:active {
 .popup-overlay.active {
     opacity: 1;
     visibility: visible;
+}
+
+
+.pricing-btn-login {
+    background: #024CEA;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(2, 76, 234, 0.3);
+}
+
+.pricing-btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(2, 76, 234, 0.4);
 }
 
 /* CONTACT PAGE */
