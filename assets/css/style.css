@@ -23,6 +23,7 @@ body {
     background: #f1f1f1;
     width: 7px;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #35C4FC;
     border-radius: 10px;
@@ -592,6 +593,42 @@ button:active {
 }
 
 /* SHIMMER EFFECT (used by multiple cards) */
+
+/* Add this to your CSS */
+#home_set>div:last-child {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* Add this */
+    overflow: hidden;
+    /* Add this */
+}
+
+#img_home {
+    width: 150%;
+    max-width: 300%;
+    height: auto;
+}
+
+/* Add shimmer effect to the image container */
+#home_set>div:last-child::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transform: skewX(-20deg);
+    pointer-events: none;
+}
+
+#home_set>div:last-child:hover::before {
+    animation: shimmer 1.5s infinite;
+}
+
 .Coach_card::before,
 .team_card::before,
 .feature-card::before {
@@ -929,7 +966,7 @@ button:active {
 
 .img_01 {
     display: flex;
-    
+
 }
 
 .text_01 h2 {
@@ -1121,6 +1158,7 @@ button:active {
 }
 
 .pricing-badge-login {
+    text-align: center;
     font-size: 1.8rem;
     padding: 10px 30px;
     border-radius: 15px 45px 15px 45px;
@@ -1184,6 +1222,24 @@ button:active {
 .popup-overlay.active {
     opacity: 1;
     visibility: visible;
+}
+
+
+.pricing-btn-login {
+    background: #024CEA;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(2, 76, 234, 0.3);
+}
+
+.pricing-btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(2, 76, 234, 0.4);
 }
 
 /* CONTACT PAGE */
@@ -1560,6 +1616,7 @@ button:active {
 
     .div_6 {
         padding: 20px 0 20px;
+        min-height: 0;
 
     }
 
@@ -1568,6 +1625,11 @@ button:active {
 
     }
 
+    .pricing-card.pricing-card {
+        min-height: 200px;
+        padding: 30px 25px;
+
+    }
 
 
     .login-section {
@@ -1584,12 +1646,21 @@ button:active {
 
     .dropdown:hover .dropdown-content {
         display: none;
-        /* Hover is disabled on mobile */
     }
 
     .dropdown.mobile-active .dropdown-content {
         display: block;
-        /* Needs JavaScript to add this class */
+    }
+
+    .pricing-btn-login {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .pricing-badge-login {
+        margin-top: -60px;
+        padding: 8px 20px;
+        font-size: 1.5rem;
     }
 
 
@@ -1659,9 +1730,9 @@ button:active {
     }
 
     .login-container .pricing-badge-login {
-        max-width: 20px;
         font-size: 0.8rem;
         text-align: center;
+        margin-bottom: 25%;
 
     }
 
