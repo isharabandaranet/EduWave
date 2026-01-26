@@ -1616,6 +1616,7 @@ button:active {
 
     .div_6 {
         padding: 20px 0 20px;
+        min-height: 0;
 
     }
 
