@@ -1646,12 +1646,10 @@ button:active {
 
     .dropdown:hover .dropdown-content {
         display: none;
-        /* Hover is disabled on mobile */
     }
 
     .dropdown.mobile-active .dropdown-content {
         display: block;
-        /* Needs JavaScript to add this class */
     }
 
     .pricing-btn-login {
