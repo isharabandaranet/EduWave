@@ -23,6 +23,7 @@ body {
     background: #f1f1f1;
     width: 7px;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #35C4FC;
     border-radius: 10px;
@@ -965,7 +966,7 @@ button:active {
 
 .img_01 {
     display: flex;
-    
+
 }
 
 .text_01 h2 {
@@ -1623,6 +1624,11 @@ button:active {
 
     }
 
+    .pricing-card.pricing-card {
+        min-height: 200px;
+        padding: 30px 25px;
+
+    }
 
 
     .login-section {
@@ -1645,6 +1651,17 @@ button:active {
     .dropdown.mobile-active .dropdown-content {
         display: block;
         /* Needs JavaScript to add this class */
+    }
+
+    .pricing-btn-login {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .pricing-badge-login {
+        margin-top: -60px;
+        padding: 8px 20px;
+        font-size: 1.5rem;
     }
 
 
@@ -1714,9 +1731,9 @@ button:active {
     }
 
     .login-container .pricing-badge-login {
-        max-width: 20px;
         font-size: 0.8rem;
         text-align: center;
+        margin-bottom: 25%;
 
     }
 
