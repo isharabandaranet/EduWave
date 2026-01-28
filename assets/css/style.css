@@ -1414,11 +1414,144 @@ button:active {
     color: #111827;
 }
 
-.card-content p {
-    font-size: 13px;
-    line-height: 1.6;
-    color: #4b5563;
+
+/* The Main Blue Card */
+.coach-pricing-card {
+    background-color: #0055ff;
+    
+    color: white;
+    height: min-content;
+    width: max-content;
+   width: 70%;
+    border-radius: 40px;
+    justify-content: center;
+    padding: 30px 60px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: block;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    gap: 40px;
 }
+
+/* Top Section Layout */
+.coach-pricing-card .card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Left Side Styling */
+.left-section {
+    flex: 1;
+    padding-right: 20px;
+}
+.coach-pricing-card h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.left-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.left-section p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    line-height: 1.4;
+    max-width: 300px;
+    margin-bottom: 30px;
+}
+
+/* Price Styling */
+.price-container h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.price-container span {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Right Side List Styling */
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Custom Checkmark Icon Styling */
+.icon-box {
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Drawing the checkmark shape using CSS borders */
+.checkmark {
+    display: inline-block;
+    width: 10px;
+    height: 6px;
+    border-bottom: 2.5px solid #0055ff;
+    border-left: 2.5px solid #0055ff;
+    transform: rotate(-45deg);
+    margin-bottom: 2px;
+}
+
+/* Button Styling */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.join-btn {
+    background-color: white;
+    color: #0055ff;
+    border: none;
+    padding: 18px 0;
+    width: 80%;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.join-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
@@ -1663,6 +1796,24 @@ button:active {
         font-size: 1.5rem;
     }
 
+    .card-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .right-section {
+        justify-content: flex-start;
+    }
+
+    .join-btn {
+        width: 100%;
+    }
+
+    .card {
+        padding: 30px;
+        margin: 20px;
+        width: 90%;
+    }
 
 }
 
