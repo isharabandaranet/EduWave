@@ -1,24 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
+/* ========== BASE STYLES ========== */
 html {
     scroll-behavior: smooth;
 }
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
 body {
-    width: 100%;
     margin: 0;
     padding: 0;
     font-family: Montserrat, sans-serif;
     cursor: url('../img/cursor.png') 0 0, auto;
-    overflow-x: hidden;
 }
 
-html,
-body {
-    overflow-x: hidden !important;
-    max-width: 100vw !important;
-}
-
+/* Scrollbar */
 ::-webkit-scrollbar {
     background: #f1f1f1;
     width: 7px;
@@ -29,28 +28,24 @@ body {
     border-radius: 10px;
 }
 
-a,
-span,
-div,
-button,
-.card-btn,
-.nav_bar_item {
+/* Custom Cursor for Interactive Elements */
+a, span, div, button, .card-btn, .nav_bar_item {
     cursor: url('../img/cursor.png') 0 0, pointer !important;
 }
 
-/* PRELOADER */
+/* ========== PRELOADER ========== */
 #preloader {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    height: 100vh;
-    width: 100%;
     position: fixed;
-    z-index: 9999;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 9999;
     transition: opacity 1s ease;
 }
 
@@ -63,20 +58,20 @@ button,
     visibility: hidden;
 }
 
-/* HEADER */
+/* ========== HEADER ========== */
 header {
-    width: 100%;
-    height: 90px;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    width: 100%;
+    height: 90px;
     background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
 }
 
 #img_logo {
@@ -88,10 +83,10 @@ header {
 .hamburger {
     display: none;
     flex-direction: column;
-    cursor: pointer;
     gap: 5px;
-    z-index: 1002;
     padding-right: 10%;
+    cursor: pointer;
+    z-index: 1002;
 }
 
 .hamburger span {
@@ -121,20 +116,18 @@ header {
     padding-right: 10%;
 }
 
-#nav_bar>a,
-.dropbtn {
+#nav_bar > a, .dropbtn {
     color: black;
     text-decoration: none;
     font-weight: 700;
     font-size: 16px;
-    transition: color 0.3s;
     background: none;
     border: none;
     cursor: pointer;
+    transition: color 0.3s;
 }
 
-#nav_bar>a:hover,
-.dropbtn:hover {
+#nav_bar > a:hover, .dropbtn:hover {
     color: #35C4FC;
 }
 
@@ -148,8 +141,7 @@ header {
 .arrow {
     display: inline-block;
     margin-left: 5px;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
+    border: 5px solid transparent;
     border-top: 6px solid black;
     transition: transform 0.3s;
 }
@@ -161,14 +153,14 @@ header {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
-    min-width: 180px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
-    z-index: 1001;
     top: 100%;
     left: 0;
+    background-color: white;
+    min-width: 180px;
     border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     overflow: hidden;
+    z-index: 1001;
 }
 
 .dropdown:hover .dropdown-content,
@@ -191,7 +183,7 @@ header {
     color: #35C4FC;
 }
 
-/* HOME SECTION */
+/* ========== HOME SECTION ========== */
 #home_set {
     width: 100%;
     min-height: 600px;
@@ -211,11 +203,13 @@ header {
     font-size: clamp(20px, 4vw, 30px);
 }
 
-#home_set>div:last-child {
+#home_set > div:last-child {
     flex: 1;
     min-width: 300px;
     display: flex;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 #img_home {
@@ -224,15 +218,15 @@ header {
     height: auto;
 }
 
-/* Buttons */
+/* ========== BUTTONS ========== */
 button {
     border: none;
     border-radius: 50px;
     font-size: 24px;
     font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     font-family: Montserrat;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 #bt_1 {
@@ -250,8 +244,7 @@ button {
     margin-left: 10px;
 }
 
-#bt_1:hover,
-#bt_2:hover {
+#bt_1:hover, #bt_2:hover {
     transform: scale(1.05);
     filter: brightness(1.1);
 }
@@ -268,25 +261,24 @@ button:active {
     transform: scale(0.95);
 }
 
-/* SERVICES / PRICING */
+/* ========== PRICING SECTION ========== */
 #pricing_set {
     width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     background: #ffffff;
+    overflow: hidden;
 }
 
 .pricing-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10;
     gap: 0;
-    margin-top: 120px;
-    margin-bottom: 150px;
+    margin: 120px 0 150px;
+    z-index: 10;
 }
 
 .pricing-card {
@@ -294,16 +286,16 @@ button:active {
     border-radius: 50px;
     padding: 50px 35px;
     width: 360px;
+    margin: 0 -10px;
     text-align: center;
     position: relative;
-    margin: 0 -10px;
-    transform: scale(0.9);
-    border: 2px solid transparent;
-    box-shadow: 0 12px 28px rgba(2, 76, 234, 0.18);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 2px solid transparent;
+    box-shadow: 0 12px 28px rgba(2, 76, 234, 0.18);
+    transform: scale(0.9);
+    transition: all 0.4s ease;
 }
 
 .pricing-card:hover {
@@ -327,7 +319,6 @@ button:active {
 
 .pricing-card.featured:hover {
     transform: scale(1.1) translateY(-8px);
-    box-shadow: 0 30px 72px rgba(2, 76, 234, 0.40), 0 0 42px rgba(2, 132, 252, 0.60);
 }
 
 .pricing-actions {
@@ -346,8 +337,8 @@ button:active {
     font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
-    transition: 0.3s;
     box-shadow: 0 10px 25px rgba(2, 76, 234, 0.3);
+    transition: all 0.3s;
 }
 
 .pricing-btn:hover {
@@ -360,8 +351,8 @@ button:active {
     color: #0f52d6;
     font-weight: 700;
     font-size: 1rem;
-    transition: transform 0.3s;
     display: inline-block;
+    transition: transform 0.3s;
 }
 
 .pricing-link:hover {
@@ -390,9 +381,7 @@ button:active {
 .pricing-card .circle_img_login {
     width: 100px;
     height: 100px;
-
 }
-
 
 .pricing-badge {
     font-size: 1.8rem;
@@ -402,8 +391,8 @@ button:active {
     background: linear-gradient(135deg, #35C4FC 0%, #024CEA 100%);
     color: #ffffff;
     font-weight: 800;
-    z-index: 2;
     box-shadow: 0 10px 25px rgba(0, 86, 224, 0.35);
+    z-index: 2;
 }
 
 .pricing-title {
@@ -420,7 +409,7 @@ button:active {
     padding: 0 10px;
 }
 
-/* SECTION 2 - CARDS */
+/* ========== CARDS SECTION ========== */
 #div_2 {
     width: 100%;
     min-height: 100vh;
@@ -428,8 +417,7 @@ button:active {
     padding: 80px 0 40px;
 }
 
-#pt_1,
-#pt_2 {
+#pt_1, #pt_2 {
     text-align: center;
     position: relative;
     z-index: 1;
@@ -453,7 +441,7 @@ button:active {
     padding: 40px 35px;
     border-radius: 25px 120px 25px 25px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.4s ease;
 }
 
 .card:hover {
@@ -511,12 +499,11 @@ button:active {
     background: #35C4FC;
 }
 
-/* COUNTER SECTION */
+/* ========== COUNTER SECTION ========== */
 #div_3 {
     width: 100%;
-    display: flex;
     height: 360px;
-    /*background: linear-gradient(to bottom, #D2F4FF, #ffffff);*/
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -533,8 +520,7 @@ button:active {
     max-width: 200px;
 }
 
-.counter,
-.counter1 {
+.counter, .counter1 {
     font-size: 48px;
     font-weight: bold;
     color: #024CEA;
@@ -560,7 +546,7 @@ button:active {
     line-height: 1.4;
 }
 
-/* COACHES SECTION */
+/* ========== COACHES SECTION ========== */
 #div_4 {
     width: 100%;
     background: white;
@@ -592,43 +578,8 @@ button:active {
     margin-bottom: 25px;
 }
 
-/* SHIMMER EFFECT (used by multiple cards) */
-
-/* Add this to your CSS */
-#home_set>div:last-child {
-    flex: 1;
-    min-width: 300px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    /* Add this */
-    overflow: hidden;
-    /* Add this */
-}
-
-#img_home {
-    width: 150%;
-    max-width: 300%;
-    height: auto;
-}
-
-/* Add shimmer effect to the image container */
-#home_set>div:last-child::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -150%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
-    transform: skewX(-20deg);
-    pointer-events: none;
-}
-
-#home_set>div:last-child:hover::before {
-    animation: shimmer 1.5s infinite;
-}
-
+/* ========== SHIMMER EFFECT ========== */
+#home_set > div:last-child::before,
 .Coach_card::before,
 .team_card::before,
 .feature-card::before {
@@ -643,6 +594,7 @@ button:active {
     pointer-events: none;
 }
 
+#home_set > div:last-child:hover::before,
 .Coach_card:hover::before,
 .team_card:hover::before,
 .feature-card:hover::before {
@@ -650,16 +602,11 @@ button:active {
 }
 
 @keyframes shimmer {
-    0% {
-        left: -150%;
-    }
-
-    100% {
-        left: 150%;
-    }
+    0% { left: -150%; }
+    100% { left: 150%; }
 }
 
-/* REVIEW SECTION */
+/* ========== REVIEW SECTION ========== */
 #div_5 {
     width: 100%;
     background: #ffffff;
@@ -674,19 +621,14 @@ button:active {
     margin: 100px 0 0;
     gap: 50px;
     width: max-content;
-    animation: scroll 20s linear infinite;
     padding: 0 50px 20px;
+    animation: scroll 20s linear infinite;
     overflow: hidden;
 }
 
 @keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .review_card {
@@ -748,8 +690,7 @@ button:active {
     background: #1f4cff;
 }
 
-/* FOOTER */
-
+/* ========== FOOTER ========== */
 .footer-section {
     background-color: #dcf6ff;
     position: relative;
@@ -763,18 +704,17 @@ button:active {
 }
 
 .cta-card {
-    background: linear-gradient(90deg, #1c75f0 0%, #3bc1fa 100%);
-    width: 85%;
-    max-width: 1100px;
-    border-radius: 50px;
-    padding: 50px 60px;
-    color: white;
-    box-shadow: 0 10px 30px rgba(28, 117, 240, 0.2);
     position: absolute;
     top: -100px;
     left: 50%;
     transform: translateX(-50%);
-    margin-bottom: 5%;
+    width: 85%;
+    max-width: 1100px;
+    background: linear-gradient(90deg, #1c75f0 0%, #3bc1fa 100%);
+    border-radius: 50px;
+    padding: 50px 60px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(28, 117, 240, 0.2);
 }
 
 .cta-content {
@@ -796,17 +736,17 @@ button:active {
 }
 
 .cta-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 40px;
     background-color: #1a0e50;
     color: white;
     border: none;
-    margin-top: 30px;
-    padding: 14px 40px;
     border-radius: 30px;
     font-weight: 600;
     font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
-    display: inline-block;
+    transition: all 0.3s;
 }
 
 .cta-btn:hover {
@@ -846,7 +786,7 @@ button:active {
     text-decoration: none;
     color: #333;
     font-size: 15px;
-    transition: 0.2s;
+    transition: color 0.2s;
 }
 
 .footer-col ul li a:hover {
@@ -882,16 +822,16 @@ button:active {
     gap: 10px;
 }
 
+.social-icons {
+    display: flex;
+    gap: 5%;
+}
+
 .icon {
     width: 100%;
     height: 100%;
     border-radius: 10px;
     transition: transform 0.2s;
-}
-
-.social-icons {
-    display: flex;
-    gap: 5%;
 }
 
 .icon:hover {
@@ -906,7 +846,7 @@ button:active {
     font-size: 12px;
 }
 
-/* ABOUT US PAGE */
+/* ========== ABOUT PAGE ========== */
 #head_01 {
     background: linear-gradient(135deg, #2ab5f6, #0055ff);
     height: 250px;
@@ -929,58 +869,51 @@ button:active {
 
 #head_01 h1 {
     font-size: 48px;
-    margin-bottom: 5px
+    margin-bottom: 5px;
 }
 
 #main_01 {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0px 20px;
+    padding: 0 20px;
 }
 
 #main_01 h1 {
     font-size: 3rem;
     color: #024CEA;
-    margin-block-end: 0%;
+    margin-block-end: 0;
+}
+
+.row_01, .row_01_about {
+    display: flex;
+    align-items: center;
+    gap: 60px;
 }
 
 .row_01 {
-    display: flex;
-    align-items: center;
-    gap: 60px;
     margin-bottom: 80px;
 }
 
-.row_01_about {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-
-}
-
-
-.text_01,
-.img_01 {
+.text_01, .img_01 {
     flex: 1;
 }
 
 .img_01 {
     display: flex;
-
 }
 
 .text_01 h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    margin-block-start: 0%;
+    margin-block-start: 0;
 }
 
 .text_01 p {
     color: #666;
     line-height: 1.6;
     margin-bottom: 20px;
-    transition: 0.3s;
-    border-left: 0px solid #2ab5f6;
+    border-left: 0 solid #2ab5f6;
+    transition: all 0.3s;
 }
 
 .text_01 p:hover {
@@ -995,15 +928,14 @@ button:active {
 
 .right_01 p {
     border-left: none;
-    border-right: 0px solid #2ab5f6;
+    border-right: 0 solid #2ab5f6;
 }
 
 .right_01 p:hover {
     padding-left: 0;
-    border-left-width: 0;
-    color: #000;
     padding-right: 15px;
     border-right-width: 4px;
+    color: #000;
 }
 
 .right_01 .line_01 {
@@ -1024,7 +956,7 @@ button:active {
     background: #d0f0fd;
     border-radius: 40px;
     cursor: pointer;
-    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.4s ease;
 }
 
 .box_01:hover {
@@ -1032,7 +964,7 @@ button:active {
     box-shadow: 0 20px 40px rgba(42, 181, 246, 0.3);
 }
 
-/* OUR TEAM SECTION */
+/* ========== TEAM SECTION ========== */
 #div_team {
     width: 100%;
     background: #cbf3ff;
@@ -1042,13 +974,13 @@ button:active {
 }
 
 .team_cards_container {
-    padding-top: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: 5%;
     flex-wrap: wrap;
 }
 
@@ -1091,7 +1023,7 @@ button:active {
     letter-spacing: 1px;
 }
 
-/* SERVICES PAGE */
+/* ========== SERVICES PAGE ========== */
 .pricing-actions-service {
     display: flex;
     align-items: center;
@@ -1117,8 +1049,8 @@ button:active {
     background: linear-gradient(135deg, #35C4FC 0%, #024CEA 100%);
     color: #ffffff;
     font-weight: 800;
-    z-index: 2;
     box-shadow: 0 10px 25px rgba(0, 86, 224, 0.35);
+    z-index: 2;
 }
 
 .img-service {
@@ -1133,8 +1065,7 @@ button:active {
     margin: 5% 0 15%;
 }
 
-/* LOGIN SECTION */
-
+/* ========== LOGIN SECTION ========== */
 .div_6 {
     width: 100%;
     min-height: 100vh;
@@ -1154,7 +1085,6 @@ button:active {
 .circle_login {
     background-color: transparent;
     border-radius: 50%;
-
 }
 
 .pricing-badge-login {
@@ -1167,8 +1097,8 @@ button:active {
     background: linear-gradient(135deg, #35C4FC 0%, #024CEA 100%);
     color: #ffffff;
     font-weight: 800;
-    z-index: 2;
     box-shadow: 0 10px 25px rgba(0, 86, 224, 0.35);
+    z-index: 2;
 }
 
 .login_h2 {
@@ -1180,7 +1110,6 @@ button:active {
 }
 
 .login_section {
-
     align-items: center;
     justify-content: center;
 }
@@ -1198,8 +1127,8 @@ button:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10;
     margin: 60px 0 40px;
+    z-index: 10;
 }
 
 .popup-overlay {
@@ -1210,20 +1139,19 @@ button:active {
     height: 100%;
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(4px);
-    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
+    z-index: 1000;
 }
 
 .popup-overlay.active {
     opacity: 1;
     visibility: visible;
 }
-
 
 .pricing-btn-login {
     background: #024CEA;
@@ -1233,8 +1161,8 @@ button:active {
     font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
-    transition: 0.3s;
     box-shadow: 0 10px 25px rgba(2, 76, 234, 0.3);
+    transition: all 0.3s;
 }
 
 .pricing-btn-login:hover {
@@ -1242,7 +1170,7 @@ button:active {
     box-shadow: 0 14px 32px rgba(2, 76, 234, 0.4);
 }
 
-/* CONTACT PAGE */
+/* ========== CONTACT PAGE ========== */
 #contact-section {
     width: 100%;
     display: flex;
@@ -1268,7 +1196,7 @@ button:active {
     padding: 40px;
     border-radius: 2rem;
     color: #ffffff;
-    border: #024CEA 0.2rem solid;
+    border: 0.2rem solid #024CEA;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -1294,15 +1222,15 @@ button:active {
 }
 
 .submit-btn {
+    float: right;
     margin-top: 20px;
     padding: 10px 30px;
     border-radius: 2rem;
     border: none;
     background: #2a0a6c;
     color: white;
-    cursor: pointer;
     font-weight: bold;
-    float: right;
+    cursor: pointer;
 }
 
 .contact-info {
@@ -1330,7 +1258,7 @@ button:active {
     line-height: 1.5;
 }
 
-/* LEARN PAGE - FEATURE GRID */
+/* ========== FEATURE GRID ========== */
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -1391,17 +1319,9 @@ button:active {
     background: linear-gradient(180deg, #7cc5ff, #4d8dff);
 }
 
-.card-stripes span:nth-child(1) {
-    height: 70px;
-}
-
-.card-stripes span:nth-child(2) {
-    height: 95px;
-}
-
-.card-stripes span:nth-child(3) {
-    height: 80px;
-}
+.card-stripes span:nth-child(1) { height: 70px; }
+.card-stripes span:nth-child(2) { height: 95px; }
+.card-stripes span:nth-child(3) { height: 80px; }
 
 .card-content {
     padding: 22px 32px 30px;
@@ -1414,38 +1334,30 @@ button:active {
     color: #111827;
 }
 
-
-/* The Main Blue Card */
+/* ========== COACH PRICING CARD ========== */
 .coach-pricing-card {
-    background-color: #0055ff;
-    
-    color: white;
-    height: min-content;
-    width: max-content;
-   width: 70%;
-    border-radius: 40px;
-    justify-content: center;
-    padding: 30px 60px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     display: block;
-    flex-direction: column;
-    margin-right: auto;
-    margin-left: auto;
-    gap: 40px;
+    width: 70%;
+    height: min-content;
+    margin: 0 auto;
+    padding: 30px 60px;
+    background-color: #0055ff;
+    color: white;
+    border-radius: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Top Section Layout */
 .coach-pricing-card .card-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-/* Left Side Styling */
 .left-section {
     flex: 1;
     padding-right: 20px;
 }
+
 .coach-pricing-card h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -1466,7 +1378,6 @@ button:active {
     margin-bottom: 30px;
 }
 
-/* Price Styling */
 .price-container h1 {
     font-size: 3.5rem;
     font-weight: 800;
@@ -1480,7 +1391,6 @@ button:active {
     opacity: 0.8;
 }
 
-/* Right Side List Styling */
 .right-section {
     flex: 1;
     display: flex;
@@ -1502,11 +1412,10 @@ li {
     font-weight: 500;
 }
 
-/* Custom Checkmark Icon Styling */
 .icon-box {
-    background-color: white;
     width: 24px;
     height: 24px;
+    background-color: white;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -1514,7 +1423,6 @@ li {
     flex-shrink: 0;
 }
 
-/* Drawing the checkmark shape using CSS borders */
 .checkmark {
     display: inline-block;
     width: 10px;
@@ -1525,7 +1433,6 @@ li {
     margin-bottom: 2px;
 }
 
-/* Button Styling */
 .btn-container {
     display: flex;
     justify-content: center;
@@ -1533,18 +1440,18 @@ li {
 }
 
 .join-btn {
+    width: 80%;
+    padding: 18px 0;
     background-color: white;
     color: #0055ff;
     border: none;
-    padding: 18px 0;
-    width: 80%;
     border-radius: 50px;
     font-size: 1.2rem;
     font-weight: 800;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
     text-decoration: none;
     text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .join-btn:hover {
@@ -1552,8 +1459,7 @@ li {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-
-/* ========== RESPONSIVE ========== */
+/* ========== RESPONSIVE - TABLET ========== */
 @media (max-width: 768px) {
     header {
         height: 70px;
@@ -1579,22 +1485,21 @@ li {
         width: 70%;
         max-width: 300px;
         height: calc(100vh - 70px);
-        background-color: white;
         flex-direction: column;
         align-items: flex-start;
         gap: 0;
         padding: 30px 20px;
+        background-color: white;
         box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-        transition: right 0.3s ease;
         overflow-y: auto;
+        transition: right 0.3s ease;
     }
 
     #nav_bar.active {
         right: 0;
     }
 
-    #nav_bar>a,
-    .dropdown {
+    #nav_bar > a, .dropdown {
         width: 100%;
         padding: 15px 0;
         border-bottom: 1px solid #eee;
@@ -1673,13 +1578,11 @@ li {
         gap: 30px;
     }
 
-    .counter,
-    .counter1 {
+    .counter, .counter1 {
         font-size: 36px;
     }
 
-    .row_01,
-    .row_01_service {
+    .row_01, .row_01_service {
         flex-direction: column;
         gap: 30px;
     }
@@ -1713,15 +1616,13 @@ li {
         text-align: center;
     }
 
-    .brand-col,
-    .links-col {
+    .brand-col, .links-col {
         flex: 1 1 100%;
         padding-right: 0;
     }
 
     .social-icons {
         justify-content: center;
-
     }
 
     #head_01 h1 {
@@ -1737,8 +1638,7 @@ li {
         align-items: center;
     }
 
-    #contact-form,
-    .contact-info {
+    #contact-form, .contact-info {
         width: 100%;
     }
 
@@ -1748,22 +1648,15 @@ li {
     }
 
     .div_6 {
-        padding: 20px 0 20px;
+        padding: 20px 0;
         min-height: 0;
-
     }
 
     .pricing-card {
-        margin-bottom: 15%;
-
-    }
-
-    .pricing-card.pricing-card {
         min-height: 200px;
         padding: 30px 25px;
-
+        margin-bottom: 15%;
     }
-
 
     .login-section {
         max-width: 400px;
@@ -1771,18 +1664,8 @@ li {
     }
 
     .row_01_about_rev_01 .img_01 {
-
         max-width: 0;
         max-height: 0;
-
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: none;
-    }
-
-    .dropdown.mobile-active .dropdown-content {
-        display: block;
     }
 
     .pricing-btn-login {
@@ -1810,13 +1693,13 @@ li {
     }
 
     .card {
+        width: 90%;
         padding: 30px;
         margin: 20px;
-        width: 90%;
     }
-
 }
 
+/* ========== RESPONSIVE - MOBILE ========== */
 @media (max-width: 480px) {
     header {
         padding: 0 3%;
@@ -1830,14 +1713,13 @@ li {
         height: 35px;
     }
 
+    #bt_1, #bt_2 {
+        width: 100%;
+    }
+
     #bt_2 {
         margin-left: 0;
         margin-top: 10px;
-    }
-
-    #bt_1,
-    #bt_2 {
-        width: 100%;
     }
 
     #home_set {
@@ -1853,21 +1735,18 @@ li {
         padding: 30px 25px;
     }
 
-    .Coach_card,
-    .team_card {
+    .Coach_card, .team_card {
         width: 100%;
         max-width: 300px;
     }
 
     .login-container {
         gap: 0.8%;
-
     }
 
     .login-container .pricing-card {
         padding: 20px 25px;
         max-height: 100px;
-
     }
 
     .login-container .pricing-desc {
@@ -1884,7 +1763,6 @@ li {
         font-size: 0.8rem;
         text-align: center;
         margin-bottom: 25%;
-
     }
 
     .login-container .pricing-title {
@@ -1893,7 +1771,6 @@ li {
 
     .login-container .pricing-btn {
         max-width: 80px;
-
     }
 
     .pricing-actions {
@@ -1928,8 +1805,7 @@ li {
     }
 
     .img-service {
-        max-height: 0px;
-
+        max-height: 0;
     }
 
     .team_card {
@@ -1938,9 +1814,7 @@ li {
     }
 
     #div_team {
-        padding: 0;
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding: 40px 0;
     }
 
     #contact-form {
